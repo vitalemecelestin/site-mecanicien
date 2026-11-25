@@ -3,9 +3,9 @@
 <meta name="robots" content="noindex">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Alex Mécanique</title>
+<title>E mécanique</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Mécanicien automobile : entretien, freins, pneus, diagnostic. Bon prix. Bon travail. Bonne route.">
+<meta name="description" content="Mécanique générale et carrosserie. Prix fait sur place, après inspection. Bon prix. Bon travail. Bonne route.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Big+Shoulders+Display:wght@700;800;900&family=JetBrains+Mono:wght@400;600&display=swap">
@@ -136,7 +136,7 @@ section { padding-block: clamp(4rem, 9vw, 7rem); }
 @media (max-width: 460px) { .promesses .wrap { grid-template-columns: 1fr; } .promesse { border-right: 0; border-bottom: 2px solid rgba(15,30,51,.15); } .promesse:last-child { border-bottom: 0; } }
 
 /* Services */
-.services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.services { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
 .service { background: var(--surface); padding: 1.6rem 1.4rem 1.5rem; display: grid; gap: .7rem; align-content: start; position: relative; transition: background .2s; }
 .service:hover { background: var(--surface-2); }
 .service svg { width: 42px; height: 42px; color: var(--ink); }
@@ -144,10 +144,14 @@ section { padding-block: clamp(4rem, 9vw, 7rem); }
 .service p { color: var(--muted); font-size: .93rem; }
 .spec { font: 600 .72rem var(--f-mono); letter-spacing: .04em; color: var(--ink); background: var(--surface-2); border-radius: 3px; padding: .3rem .5rem; justify-self: start; }
 .service:hover .spec { background: var(--hv); color: var(--hv-ink); }
-.prix { font: 700 .9rem var(--f-mono); }
-.prix small { font-weight: 400; color: var(--muted); }
-@media (max-width: 980px) { .services { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 520px) { .services { grid-template-columns: 1fr; } }
+.service { padding: 2.2rem 2rem 2rem; }
+.service svg { width: 56px; height: 56px; }
+.service h3 { font-size: 2.1rem; }
+.service ul { margin: 0; padding: 0; list-style: none; display: grid; gap: .35rem; }
+.service li { display: flex; gap: .55rem; align-items: baseline; font-size: .95rem; }
+.service li::before { content: ""; flex: none; width: 8px; height: 8px; background: var(--hv); transform: translateY(-1px); }
+.prix-place { font: 700 .82rem var(--f-mono); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+@media (max-width: 700px) { .services { grid-template-columns: 1fr; } }
 
 /* Avant / après */
 .galerie { display: grid; grid-template-columns: 1fr 300px; gap: 1.4rem; align-items: start; }
@@ -221,8 +225,6 @@ section { padding-block: clamp(4rem, 9vw, 7rem); }
 .u2 { background: rgba(245,196,0,.16); color: #ffd84a; }
 .u3 { background: rgba(255,107,87,.18); color: #ff8a7a; }
 .verdict-bas { display: flex; flex-wrap: wrap; gap: .8rem 1.4rem; align-items: center; }
-.verdict-bas .prix { font: 700 1rem var(--f-mono); }
-.verdict-bas .prix small { color: rgba(242,245,249,.6); }
 .dec-note { font: .72rem var(--f-mono); color: rgba(242,245,249,.5); margin-top: .9rem; }
 .temoins { display: grid; grid-template-columns: repeat(4, 1fr); gap: .6rem; }
 .temoin { display: grid; justify-items: center; gap: .5rem; padding: 1.1rem .6rem; background: #07101d; border: 2px solid rgba(255,255,255,.08); border-radius: var(--radius); color: inherit; font: 600 .82rem var(--f-body); cursor: pointer; text-align: center; transition: border-color .15s; }
@@ -246,41 +248,10 @@ section { padding-block: clamp(4rem, 9vw, 7rem); }
   footer { padding-bottom: 6rem; }
 }
 
-/* Bon de travail (estimateur) */
+/* Fond gris des sections d'outils */
 .devis { background: var(--surface-2); }
-.devis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
-.devis-grid > * { min-width: 0; }
 .panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem; }
 .panel h3 { margin-bottom: 1rem; }
-.seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: .4rem; margin-bottom: 1.4rem; }
-.seg label { position: relative; }
-.seg input { position: absolute; opacity: 0; }
-.seg span { display: grid; place-items: center; text-align: center; padding: .7rem .4rem; border: 2px solid var(--line); border-radius: var(--radius); font-weight: 600; font-size: .9rem; cursor: pointer; line-height: 1.2; }
-.seg span small { display: block; font: 400 .68rem var(--f-mono); color: var(--muted); }
-.seg input:checked + span { border-color: var(--ink); background: var(--ink); color: var(--bg); }
-.seg input:checked + span small { color: inherit; opacity: .7; }
-.seg input:focus-visible + span { outline: 3px solid var(--hv); outline-offset: 2px; }
-.checks { display: grid; gap: .35rem; }
-.check { display: grid; grid-template-columns: auto 1fr auto; gap: .8rem; align-items: center; padding: .6rem .7rem; border-radius: var(--radius); cursor: pointer; border: 1px solid transparent; }
-.check:hover { background: var(--surface-2); }
-.check input { width: 20px; height: 20px; accent-color: var(--ink); }
-.check em { font: 400 .76rem var(--f-mono); color: var(--muted); font-style: normal; white-space: nowrap; }
-.check:has(input:checked) { border-color: var(--line); background: var(--surface-2); }
-
-.bon { background: var(--surface); border-radius: 4px; font-family: var(--f-mono); font-size: .85rem; box-shadow: 0 1px 0 var(--line), 0 20px 40px -20px rgba(15,30,51,.35); position: relative; }
-.bon-head { background: var(--navy); color: var(--navy-ink); padding: 1.1rem 1.4rem; display: flex; justify-content: space-between; align-items: end; gap: 1rem; border-radius: 4px 4px 0 0; }
-.bon-head b { font: 900 1.6rem var(--f-display); text-transform: uppercase; letter-spacing: .03em; }
-.bon-head span { font-size: .72rem; opacity: .7; text-align: right; }
-.bon-body { padding: 1rem 1.4rem 1.4rem; }
-.bon-row { display: grid; grid-template-columns: 1fr auto; gap: 1rem; padding: .5rem 0; border-bottom: 1px dashed var(--line); font-variant-numeric: tabular-nums; }
-.bon-row span:last-child { text-align: right; white-space: nowrap; }
-.bon-empty { color: var(--muted); padding: 1.2rem 0; text-align: center; }
-.bon-tot { display: grid; grid-template-columns: 1fr auto; gap: .2rem 1rem; padding-top: .9rem; font-variant-numeric: tabular-nums; }
-.bon-tot span:nth-child(even) { text-align: right; }
-.bon-tot .grand { font: 900 1.5rem var(--f-display); padding-top: .4rem; border-top: 2px solid var(--ink); margin-top: .4rem; }
-.bon-note { margin-top: 1rem; font-size: .72rem; color: var(--muted); line-height: 1.5; }
-.bon-actions { margin-top: 1.2rem; }
-@media (max-width: 860px) { .devis-grid { grid-template-columns: 1fr; } }
 
 /* Étapes */
 .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; counter-reset: s; position: relative; }
@@ -366,14 +337,13 @@ footer .s { font-family: var(--f-mono); font-size: .78rem; color: var(--hv); let
   <div class="wrap">
     <a class="logo" href="#accueil" aria-label="Accueil">
       <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#f5c400"/><path d="M27.5 8.5a7 7 0 0 0-8.6 8.9L9.6 26.7a2.6 2.6 0 0 0 3.7 3.7l9.3-9.3a7 7 0 0 0 8.9-8.6l-4 4-3.3-.9-.9-3.3z" fill="#0f1e33"/></svg>
-      <span><b data-cfg="nom">Alex Mécanique</b><small data-cfg="metier">Mécanicien automobile</small></span>
+      <span><b data-cfg="nom">E mécanique</b><small data-cfg="metier">Mécanicien automobile</small></span>
     </a>
     <button class="burger" id="burger" aria-expanded="false" aria-controls="nav">MENU</button>
     <nav class="nav" id="nav">
       <a href="#services">Services</a>
       <a href="#decodeur">Décodeur</a>
       <a href="#realisations">Avant / après</a>
-      <a href="#devis">Estimation</a>
       <a href="#etapes">Comment ça marche</a>
       <a href="#faq">Questions</a>
       <a class="btn btn-hv" href="#rendez-vous">Prendre rendez-vous</a>
@@ -387,14 +357,14 @@ footer .s { font-family: var(--f-mono); font-size: .78rem; color: var(--hv); let
       <div>
         <p class="eyebrow"><span data-cfg="zone">Montréal et environs</span></p>
         <h1 class="slogan"><span>Bon prix.</span><span>Bon travail.</span><span>Bonne route.</span></h1>
-        <p class="lead">Entretien, freins, pneus et diagnostic, faits avec soin par un mécanicien qui vous explique tout. Vous connaissez le prix avant que je commence, et vous repartez l'esprit tranquille.</p>
+        <p class="lead">Mécanique générale et carrosserie, faites avec soin par un mécanicien qui vous explique tout. Le prix se fait sur place : je regarde votre auto et je vous le donne avant de commencer.</p>
         <div class="hero-cta">
           <a class="btn btn-hv" href="#rendez-vous">Prendre rendez-vous
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           <a class="btn btn-ghost" href="#decodeur">Mon auto fait un bruit</a>
         </div>
         <p class="accueil-badge"><b>Sur rendez-vous</b> ou <b>premier arrivé, premier servi</b></p>
-        <div class="hero-facts"><span>Soumission avant les travaux</span><span>Pièces usées montrées</span><span>Travail garanti*</span></div>
+        <div class="hero-facts"><span>Mécanique générale</span><span>Carrosserie</span><span>Prix fait sur place</span><span>Travail garanti*</span></div>
       </div>
       <div class="gauge-card">
         <svg class="gauge" id="gauge" viewBox="0 0 400 400" role="img" aria-label="Compte-tours décoratif">
@@ -409,9 +379,10 @@ footer .s { font-family: var(--f-mono); font-size: .78rem; color: var(--hv); let
         </svg>
         <div class="ticket" aria-hidden="true">
           <h4>Bon de travail <em>n° 0427</em></h4>
-          <div class="l"><span>Vidange synth. 5W-30</span><b>95,00</b></div>
-          <div class="l"><span>Plaquettes av.</span><b>210,00</b></div>
-          <div class="l"><span>Inspection 40 pts</span><b>incl.</b></div>
+          <div class="l"><span>Inspection</span><b>✓</b></div>
+          <div class="l"><span>Mécanique générale</span><b>✓</b></div>
+          <div class="l"><span>Carrosserie</span><b>✓</b></div>
+          <div class="l"><span>Prix</span><b>sur place</b></div>
           <span class="stamp">APPROUVÉ</span>
         </div>
       </div>
@@ -420,7 +391,7 @@ footer .s { font-family: var(--f-mono); font-size: .78rem; color: var(--hv); let
 
   <section class="promesses" aria-label="Mes engagements">
     <div class="wrap">
-      <div class="promesse"><b>Prix connu d'avance</b><span>Soumission claire avant toute réparation.</span></div>
+      <div class="promesse"><b>Prix fait sur place</b><span>Je regarde l'auto et je vous donne le prix avant de commencer.</span></div>
       <div class="promesse"><b>Rien de caché</b><span>Je vous montre les pièces usées et je vous explique pourquoi.</span></div>
       <div class="promesse"><b>Travail garanti</b><span>Pièces et main-d'œuvre, selon les conditions applicables.</span></div>
       <div class="promesse"><b>Votre accord d'abord</b><span>Aucun extra ajouté sans votre OK.</span></div>
@@ -432,7 +403,7 @@ footer .s { font-family: var(--f-mono); font-size: .78rem; color: var(--hv); let
       <div class="sec-head">
         <p class="eyebrow">Services</p>
         <h2>Ce que je répare</h2>
-        <p class="lead">Les réparations de tous les jours, pour la plupart des voitures, VUS et camionnettes. Les prix sont donnés à titre indicatif ; la soumission finale dépend de votre véhicule.</p>
+        <p class="lead">Deux métiers, un seul interlocuteur, pour la plupart des voitures, VUS et camionnettes. Chaque auto est différente : le prix se fait sur place, une fois l'auto inspectée.</p>
       </div>
       <div class="services" id="liste-services"></div>
     </div>
@@ -443,7 +414,7 @@ footer .s { font-family: var(--f-mono); font-size: .78rem; color: var(--hv); let
       <div class="sec-head">
         <p class="eyebrow">Le décodeur</p>
         <h2>Votre auto fait un drôle de bruit ?</h2>
-        <p class="lead">Écoutez les bruits les plus courants et choisissez celui qui ressemble au vôtre. Vous saurez tout de suite ce que c'est probablement, si c'est urgent et combien ça coûte en général.</p>
+        <p class="lead">Écoutez les bruits les plus courants et choisissez celui qui ressemble au vôtre. Vous saurez tout de suite ce que c'est probablement et si c'est urgent.</p>
       </div>
       <div class="onglets" role="tablist" aria-label="Choisir un outil">
         <button role="tab" id="t-bruits" aria-selected="true" aria-controls="p-bruits">Les bruits</button>
@@ -462,7 +433,6 @@ footer .s { font-family: var(--f-mono); font-size: .78rem; color: var(--hv); let
             <h3 id="v-titre"></h3>
             <p id="v-texte"></p>
             <div class="verdict-bas">
-              <span class="prix" id="v-prix"></span>
               <a class="btn btn-hv" href="#rendez-vous" id="v-rdv">Réserver pour ce problème</a>
             </div>
           </div>
@@ -477,7 +447,7 @@ footer .s { font-family: var(--f-mono); font-size: .78rem; color: var(--hv); let
       <div class="sec-head">
         <p class="eyebrow">Avant / après</p>
         <h2>Le travail, en images</h2>
-        <p class="lead">Glissez la poignée jaune pour comparer l'état de la pièce à l'arrivée et après mon passage.</p>
+        <p class="lead">Glissez la poignée jaune pour comparer l'état de l'auto à l'arrivée et après mon passage.</p>
       </div>
       <div class="galerie">
         <div>
@@ -502,37 +472,6 @@ footer .s { font-family: var(--f-mono); font-size: .78rem; color: var(--hv); let
     </div>
   </section>
 
-  <section class="devis" id="devis">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Estimation en ligne</p>
-        <h2>Votre bon de travail, avant de venir</h2>
-        <p class="lead">Choisissez votre véhicule et les travaux. Vous voyez tout de suite une fourchette de prix, taxes comprises.</p>
-      </div>
-      <div class="devis-grid">
-        <div class="panel">
-          <h3>1. Votre véhicule</h3>
-          <div class="seg" role="radiogroup" aria-label="Type de véhicule">
-            <label><input type="radio" name="vehicule" id="v-compacte" value="1" checked><span>Compacte<small>Civic, Corolla</small></span></label>
-            <label><input type="radio" name="vehicule" id="v-vus" value="1.15"><span>Berline / VUS<small>RAV4, CR-V</small></span></label>
-            <label><input type="radio" name="vehicule" id="v-camion" value="1.3"><span>Camionnette<small>F-150, Sierra</small></span></label>
-          </div>
-          <h3>2. Les travaux</h3>
-          <div class="checks" id="checks"></div>
-        </div>
-        <div class="bon" aria-live="polite">
-          <div class="bon-head"><b>Bon de travail</b><span>Estimation<br><span id="bon-date"></span></span></div>
-          <div class="bon-body">
-            <div id="bon-lignes"></div>
-            <div class="bon-tot" id="bon-tot"></div>
-            <p class="bon-note">Fourchette indicative, pièces et main-d'œuvre comprises. TPS 5 % et TVQ 9,975 % incluses. Le prix exact vous est confirmé par écrit après l'inspection, avant le début des travaux.</p>
-            <div class="bon-actions"><a class="btn btn-hv" href="#rendez-vous" id="bon-rdv">Réserver avec ces travaux</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="etapes">
     <div class="wrap">
       <div class="sec-head">
@@ -541,7 +480,7 @@ footer .s { font-family: var(--f-mono); font-size: .78rem; color: var(--hv); let
       </div>
       <div class="steps">
         <div class="step"><div class="step-bar"></div><span class="step-n">1</span><div><b>Vous prenez rendez-vous</b><p>Par téléphone, texto ou avec le formulaire.</p></div></div>
-        <div class="step"><div class="step-bar"></div><span class="step-n">2</span><div><b>J'inspecte</b><p>Je trouve la cause et je prépare une soumission écrite.</p></div></div>
+        <div class="step"><div class="step-bar"></div><span class="step-n">2</span><div><b>J'inspecte</b><p>Je regarde l'auto sur place et je vous donne le prix.</p></div></div>
         <div class="step"><div class="step-bar"></div><span class="step-n">3</span><div><b>Vous décidez</b><p>Rien ne commence sans votre accord sur le prix.</p></div></div>
         <div class="step"><div class="step-bar"></div><span class="step-n">4</span><div><b>Je répare</b><p>Avec des pièces de qualité, au couple de serrage prescrit.</p></div></div>
         <div class="step"><div class="step-bar"></div><span class="step-n">5</span><div><b>Bonne route</b><p>Je vous montre ce qui a été changé et vous repartez.</p></div></div>
@@ -558,10 +497,11 @@ footer .s { font-family: var(--f-mono); font-size: .78rem; color: var(--hv); let
       <div class="outils-grid">
         <div class="saison">
           <svg class="flocon" viewBox="0 0 100 100" aria-hidden="true"><g stroke="#fff" stroke-width="6" stroke-linecap="round" fill="none"><path d="M50 5v90M11 27.5l78 45M11 72.5l78-45"/><path d="M38 12l12 10 12-10M38 88l12-10 12 10"/></g></svg>
-          <p class="eyebrow" id="saison-titre">Pneus d'hiver</p>
+          <p class="eyebrow" id="saison-titre">Prêt pour l'hiver ?</p>
           <div class="compte"><b id="saison-jours">–</b><span id="saison-unite">jours</span></div>
-          <p id="saison-texte">Au Québec, les pneus d'hiver sont obligatoires du 1er décembre au 15 mars.</p>
-          <div><a class="btn btn-hv" href="#rendez-vous" data-service="pneus">Réserver ma pose de pneus</a></div>
+          <p id="saison-texte">avant le 1er décembre.</p>
+          <p>Freins, batterie, suspension : je vérifie que votre auto est prête pour le froid. Et comme le sel ronge la carrosserie, on traite la rouille avant qu'elle perce.</p>
+          <div><a class="btn btn-hv" href="#rendez-vous" data-service="mecanique">Réserver une inspection</a></div>
         </div>
         <div class="panel">
           <h3>Ma prochaine vidange</h3>
@@ -588,11 +528,11 @@ footer .s { font-family: var(--f-mono); font-size: .78rem; color: var(--hv); let
         <h2>Vous vous demandez</h2>
       </div>
       <div class="faq">
-        <details open><summary>Est-ce que je connais le prix avant les travaux ?</summary><p>Oui. Après l'inspection, je vous donne une soumission écrite. Si je découvre autre chose en cours de route, je vous appelle avant de toucher à quoi que ce soit.</p></details>
+        <details open><summary>Combien ça coûte ?</summary><p>Le prix se fait sur place. Chaque auto est différente : je la regarde, je vous dis ce qu'il faut faire et combien, et rien ne commence sans votre accord. Si je découvre autre chose en cours de route, je vous en parle avant de toucher à quoi que ce soit.</p></details>
+        <details><summary>Qu'est-ce que vous faites exactement ?</summary><p>De la mécanique générale et de la carrosserie. Pour le reste, je vous le dis franchement et je vous oriente vers quelqu'un.</p></details>
         <details><summary>Quelle garantie offrez-vous ?</summary><p>Les pièces et la main-d'œuvre sont garanties selon les conditions applicables à chaque réparation (type de pièce, usage du véhicule). Les détails sont écrits sur votre facture.</p></details>
         <details><summary>Puis-je fournir mes propres pièces ?</summary><p>C'est possible dans certains cas, mais la garantie ne couvre alors que la main-d'œuvre. Parlons-en lors de la prise de rendez-vous.</p></details>
         <details><summary>Est-ce que ça annule la garantie du fabricant ?</summary><p>Non. Faire faire l'entretien ailleurs qu'au concessionnaire ne l'annule pas, tant que l'entretien respecte le manuel du fabricant et que vous gardez vos factures.</p></details>
-        <details><summary>Combien de temps prend une vidange ?</summary><p>Environ 30 à 45 minutes, inspection comprise. Une pose de pneus avec balancement prend à peu près une heure.</p></details>
         <details><summary>Quels modes de paiement acceptez-vous ?</summary><p>Comptant, Interac et cartes de crédit.</p></details>
       </div>
     </div>
@@ -625,7 +565,7 @@ footer .s { font-family: var(--f-mono); font-size: .78rem; color: var(--hv); let
           <div class="field"><label for="f-service">Service</label><select id="f-service"></select></div>
           <div class="field"><label for="f-date">Date souhaitée</label><input id="f-date" type="date"></div>
         </div>
-        <div class="field"><label for="f-msg">Ce que vous remarquez</label><textarea id="f-msg" rows="3" placeholder="Bruit en freinant, voyant allumé, vibration…"></textarea></div>
+        <div class="field"><label for="f-msg">Ce que vous remarquez</label><textarea id="f-msg" rows="3" placeholder="Bruit en freinant, voyant allumé, bosse, rouille…"></textarea></div>
         <p class="toast" id="erreur" hidden></p>
         <button class="btn btn-hv" type="submit">Préparer mon message</button>
         <div id="recap-zone" hidden>
@@ -642,8 +582,8 @@ footer .s { font-family: var(--f-mono); font-size: .78rem; color: var(--hv); let
 
 <footer>
   <div class="wrap">
-    <div><b data-cfg="nom">Alex Mécanique</b><div class="s">Bon prix. Bon travail. Bonne route.</div><div style="font-size:.82rem;margin-top:.3rem">Sur rendez-vous ou premier arrivé, premier servi.</div></div>
-    <p>* Garantie selon les conditions applicables à chaque réparation. Prix indicatifs, taxes en sus sauf mention.</p>
+    <div><b data-cfg="nom">E mécanique</b><div class="s">Bon prix. Bon travail. Bonne route.</div><div style="font-size:.82rem;margin-top:.3rem">Sur rendez-vous ou premier arrivé, premier servi.</div></div>
+    <p>* Garantie selon les conditions applicables à chaque réparation. Prix fait sur place, après inspection.</p>
   </div>
 </footer>
 
@@ -653,44 +593,33 @@ footer .s { font-family: var(--f-mono); font-size: .78rem; color: var(--hv); let
 </div>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"AutoRepair","name":"Alex Mécanique","slogan":"Bon prix. Bon travail. Bonne route.","telephone":"+1-514-555-0187","areaServed":"Montréal et environs","priceRange":"$$","currenciesAccepted":"CAD","paymentAccepted":"Comptant, Interac, carte de crédit","openingHours":["Mo-Fr 07:30-17:30","Sa 08:00-13:00"],"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Vidange d'huile"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Freins"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Pose de pneus"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Diagnostic"}}]}
+{"@context":"https://schema.org","@type":"AutoRepair","name":"E mécanique","slogan":"Bon prix. Bon travail. Bonne route.","telephone":"+1-514-555-0187","areaServed":"Montréal et environs","currenciesAccepted":"CAD","paymentAccepted":"Comptant, Interac, carte de crédit","openingHours":["Mo-Fr 07:30-17:30","Sa 08:00-13:00"],"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Mécanique générale"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Carrosserie"}}]}
 </script>
 
 <script>
 // ===== À personnaliser : tout le site se met à jour d'ici =====
 const CONFIG = {
-  nom: "Alex Mécanique",
+  nom: "E mécanique",
   metier: "Mécanicien automobile",
   tel: "514 555-0187",
   zone: "Montréal et environs",
 };
-// Prix indicatifs (pièces + main-d'œuvre, avant taxes) pour une compacte : à ajuster.
+// Les deux services offerts. Pas de prix en ligne : le prix se fait sur place.
 const SERVICES = [
-  { id: "vidange", nom: "Vidange d'huile synthétique", spec: "0W-20 à 10W-30 · filtre neuf", min: 85, max: 130, icone: "huile", texte: "Huile et filtre de qualité, niveau des liquides et inspection 40 points incluse." },
-  { id: "freins", nom: "Plaquettes de freins", spec: "Essieu avant ou arrière", min: 180, max: 320, icone: "frein", texte: "Plaquettes neuves, nettoyage et lubrification des étriers, essai routier." },
-  { id: "disques", nom: "Plaquettes et disques", spec: "Mesure d'épaisseur au micromètre", min: 350, max: 560, icone: "disque", texte: "Quand les disques sont sous l'épaisseur minimale ou voilés." },
-  { id: "pneus", nom: "Pose de pneus saisonniers", spec: "4 roues · balancement · couple 110–140 N·m", min: 70, max: 110, icone: "pneu", texte: "Changement été / hiver, balancement et serrage au couple prescrit." },
-  { id: "alignement", nom: "Alignement", spec: "Parallélisme · carrossage", min: 100, max: 150, icone: "align", texte: "Pour une auto qui tire d'un côté ou des pneus qui s'usent mal." },
-  { id: "diagnostic", nom: "Diagnostic « check engine »", spec: "Lecture OBD-II des codes", min: 90, max: 140, icone: "diag", texte: "Je trouve la vraie cause du voyant, pas seulement le code." },
-  { id: "batterie", nom: "Batterie", spec: "Test de charge · remplacement", min: 180, max: 300, icone: "batt", texte: "Test gratuit avec un entretien ; remplacement si elle ne tient plus." },
-  { id: "suspension", nom: "Suspension", spec: "Amortisseurs · biellettes · rotules", min: 450, max: 820, icone: "susp", texte: "Bruits dans les bosses, tenue de route molle ou usure inégale." },
+  { id: "mecanique", nom: "Mécanique générale", icone: "cle",
+    texte: "Les problèmes de tous les jours, trouvés et réglés proprement.",
+    liste: ["Freins et suspension", "Entretien et vidanges", "Diagnostic des bruits et des témoins", "Réparations courantes"] },
+  { id: "carrosserie", nom: "Carrosserie", icone: "auto",
+    texte: "Une auto qui a l'air aussi bien qu'elle roule.",
+    liste: ["Bosses et éraflures", "Rouille", "Pièces de carrosserie", "Retouches"] },
 ];
-const TAXES = 0.14975;
 
 const ICONES = {
-  huile: '<path d="M8 14h20l6-6 6 2-6 7v13a3 3 0 0 1-3 3H11a3 3 0 0 1-3-3z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path class="hv" d="M15 21c0 3 4 3 4 0 0-2-2-4-2-4s-2 2-2 4z"/>',
-  frein: '<circle cx="21" cy="21" r="14" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="21" cy="21" r="5" fill="none" stroke="currentColor" stroke-width="2.4"/><path class="hv" d="M30 9a16 16 0 0 1 4 9l-6 1a10 10 0 0 0-3-5z"/>',
-  disque: '<circle cx="21" cy="21" r="15" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="21" cy="21" r="6" class="hv"/><g fill="currentColor"><circle cx="21" cy="10" r="1.6"/><circle cx="31" cy="21" r="1.6"/><circle cx="21" cy="32" r="1.6"/><circle cx="11" cy="21" r="1.6"/></g>',
-  pneu: '<circle cx="21" cy="21" r="16" fill="none" stroke="currentColor" stroke-width="5" stroke-dasharray="3 2"/><circle cx="21" cy="21" r="8" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="21" cy="21" r="3" class="hv"/>',
-  align: '<path d="M6 34h30" stroke="currentColor" stroke-width="2.4"/><rect x="9" y="12" width="6" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2.4"/><rect x="27" y="12" width="6" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2.4"/><path class="hv" d="M15 20h12v2H15z"/><path d="M21 4v6" stroke="currentColor" stroke-width="2.4"/>',
-  diag: '<rect x="6" y="9" width="30" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2.4"/><path class="hv" d="M10 22l5-6 4 4 5-7 4 5h4v2h-5l-3-4-5 7-4-4-4 5z"/><path d="M16 34h10" stroke="currentColor" stroke-width="2.4"/>',
-  batt: '<rect x="6" y="12" width="30" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M12 8h5M25 8h5" stroke="currentColor" stroke-width="3"/><path class="hv" d="M22 15l-6 9h5l-2 6 7-10h-5z"/>',
-  susp: '<path d="M21 4v6M21 32v6" stroke="currentColor" stroke-width="2.4"/><path d="M13 12h16M13 30h16" stroke="currentColor" stroke-width="2.4"/><path class="hv" d="M14 14l14 3-14 3 14 3-14 3 14 3v1H14z" opacity=".95"/>',
+  cle: '<path d="M30 5.5a8 8 0 0 0-9.8 10.2L6.6 29.3a3 3 0 0 0 4.2 4.2l13.6-13.6A8 8 0 0 0 34.6 10l-4.6 4.6-3.8-1-1-3.8z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle class="hv" cx="9" cy="31" r="2.2"/>',
+  auto: '<path d="M4 27v-5l4-1 4-7a4 4 0 0 1 3.4-2h11a4 4 0 0 1 3.3 1.8L34 20l3 1.2V27a2 2 0 0 1-2 2h-2M10 29H7a2 2 0 0 1-2-2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M15 29h12" stroke="currentColor" stroke-width="2.4"/><circle cx="12.5" cy="29" r="3.5" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="29.5" cy="29" r="3.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path class="hv" d="M14 19l2.6-4.4a2 2 0 0 1 1.7-1h3.7v5.4z"/>',
 };
 
 const $ = (s) => document.querySelector(s);
-const argent = (n) => n.toLocaleString("fr-CA", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " $";
-const rond = (n) => Math.round(n / 5) * 5;
 
 // Configuration
 document.querySelectorAll("[data-cfg]").forEach((el) => { const v = CONFIG[el.dataset.cfg]; if (v) el.textContent = v; });
@@ -733,9 +662,9 @@ $("#liste-services").innerHTML = SERVICES.map((s) => `
   <article class="service">
     <svg viewBox="0 0 42 42" aria-hidden="true">${ICONES[s.icone]}</svg>
     <h3>${s.nom}</h3>
-    <span class="spec">${s.spec}</span>
     <p>${s.texte}</p>
-    <span class="prix">${s.min} – ${s.max} $ <small>avant taxes</small></span>
+    <ul>${s.liste.map((l) => `<li>${l}</li>`).join("")}</ul>
+    <span class="prix-place">Prix fait sur place, après inspection</span>
   </article>`).join("");
 
 // ===== Décodeur : bruits et témoins =====
@@ -745,61 +674,56 @@ const URGENCES = {
   3: ["u3", "Arrêtez-vous dès que possible"],
 };
 const BRUITS = [
-  { id: "grincement", nom: "Grincement aigu au freinage", court: "Aigu · en freinant", urgence: 2, service: "freins",
+  { id: "grincement", nom: "Grincement aigu au freinage", court: "Aigu · en freinant", urgence: 2,
     titre: "Plaquettes presque finies", texte: "Les témoins d'usure des plaquettes frottent sur le disque. C'est un avertissement prévu par le fabricant : les plaquettes arrivent à la fin, mais vous avez encore un peu de marge." },
-  { id: "frottement", nom: "Frottement métallique en freinant", court: "Grave · métal sur métal", urgence: 3, service: "disques",
+  { id: "frottement", nom: "Frottement métallique en freinant", court: "Grave · métal sur métal", urgence: 3,
     titre: "Métal contre métal", texte: "Les plaquettes sont finies : leur support en métal frotte directement sur le disque. Le freinage est moins efficace et le disque s'abîme à chaque arrêt." },
-  { id: "claquement", nom: "Claquement en tournant", court: "Clic-clic · volant tourné", urgence: 2, prix: "300 – 650 $",
+  { id: "claquement", nom: "Claquement en tournant", court: "Clic-clic · volant tourné", urgence: 2,
     titre: "Joint homocinétique usé", texte: "Un claquement régulier qui accélère quand vous tournez à fond vient souvent d'un joint de transmission usé, en général parce que son soufflet en caoutchouc est déchiré." },
-  { id: "bourdonnement", nom: "Bourdonnement qui monte avec la vitesse", court: "Grondement · sur la route", urgence: 2, prix: "250 – 500 $",
+  { id: "bourdonnement", nom: "Bourdonnement qui monte avec la vitesse", court: "Grondement · sur la route", urgence: 2,
     titre: "Roulement de roue", texte: "Un grondement qui augmente avec la vitesse et change dans les courbes pointe vers un roulement de roue usé. Des pneus usés de façon inégale peuvent donner un bruit semblable." },
-  { id: "sifflement", nom: "Sifflement au démarrage", court: "Cri aigu · moteur froid", urgence: 1, prix: "120 – 280 $",
+  { id: "sifflement", nom: "Sifflement au démarrage", court: "Cri aigu · moteur froid", urgence: 1,
     titre: "Courroie d'accessoires", texte: "Un cri aigu au démarrage à froid ou quand vous tournez le volant : la courroie est usée, mal tendue, ou son tendeur est fatigué. Si elle casse, vous perdez la direction assistée et la recharge de la batterie." },
-  { id: "cognement", nom: "Cognement régulier du moteur", court: "Toc-toc · suit le moteur", urgence: 3, service: "diagnostic",
+  { id: "cognement", nom: "Cognement régulier du moteur", court: "Toc-toc · suit le moteur", urgence: 3,
     titre: "Cognement interne du moteur", texte: "Un cognement qui suit le régime du moteur peut venir d'un manque d'huile ou d'une pièce interne usée. Vérifiez le niveau d'huile ; continuer à rouler peut détruire le moteur." },
 ];
 const TEMOINS = [
-  { id: "moteur", nom: "Moteur", couleur: "orange", urgence: 2, service: "diagnostic",
+  { id: "moteur", nom: "Moteur", couleur: "orange", urgence: 2,
     titre: "Témoin moteur allumé (fixe)", texte: "Le calculateur a enregistré un défaut : ça va d'un bouchon d'essence mal serré à un capteur défectueux. L'auto roule normalement ? Faites lire le code bientôt.",
     svg: '<path d="M10 14h8v-4h12v4h6l4 4h4v-3h4v14h-4v-3h-4l-4 6H16l-4-5H8v-5H5v7H2V14h3v4h3z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>' },
-  { id: "moteur-clignote", nom: "Moteur qui clignote", couleur: "rouge", urgence: 3, service: "diagnostic",
+  { id: "moteur-clignote", nom: "Moteur qui clignote", couleur: "rouge", urgence: 3,
     titre: "Témoin moteur qui clignote", texte: "Le moteur a des ratés importants : de l'essence non brûlée peut abîmer le convertisseur catalytique. Ralentissez, évitez d'accélérer fort et faites vérifier l'auto sans attendre.",
     svg: '<path d="M10 14h8v-4h12v4h6l4 4h4v-3h4v14h-4v-3h-4l-4 6H16l-4-5H8v-5H5v7H2V14h3v4h3z" fill="currentColor" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>' },
-  { id: "huile", nom: "Pression d'huile", couleur: "rouge", urgence: 3, service: "vidange",
+  { id: "huile", nom: "Pression d'huile", couleur: "rouge", urgence: 3,
     titre: "Pression d'huile basse", texte: "Le moteur ne reçoit plus assez d'huile. Arrêtez-vous dès que c'est sécuritaire, coupez le moteur et vérifiez le niveau. Ne repartez pas si le témoin reste allumé.",
     svg: '<path d="M6 20h10l4-4h10l12-4 4 3-10 8v7H16l-4-6H6z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><path d="M49 24c0 3 4 3 4 0 0-2-2-4-2-4s-2 2-2 4z" fill="currentColor"/>' },
-  { id: "batterie", nom: "Batterie", couleur: "rouge", urgence: 3, service: "batterie",
+  { id: "batterie", nom: "Batterie", couleur: "rouge", urgence: 3,
     titre: "Système de charge", texte: "La batterie ne se recharge plus, souvent à cause de l'alternateur ou de la courroie. L'auto roule sur la réserve de la batterie : allez directement au garage et évitez de couper le moteur.",
     svg: '<rect x="8" y="12" width="38" height="24" rx="2" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M14 8h8M32 8h8M15 24h7M34 24h7M37.5 20.5v7" stroke="currentColor" stroke-width="2.6"/>' },
-  { id: "temperature", nom: "Température", couleur: "rouge", urgence: 3, service: "diagnostic",
+  { id: "temperature", nom: "Température", couleur: "rouge", urgence: 3,
     titre: "Moteur qui surchauffe", texte: "Arrêtez-vous et laissez refroidir le moteur. N'ouvrez jamais le bouchon du radiateur à chaud : le liquide sous pression peut vous brûler. Rouler en surchauffe peut briser le moteur.",
     svg: '<path d="M27 6v18" stroke="currentColor" stroke-width="3"/><circle cx="27" cy="27" r="5" fill="currentColor"/><path d="M27 12h6M27 18h6" stroke="currentColor" stroke-width="2.4"/><path d="M8 36c3-2 5 2 8 0s5 2 8 0 5 2 8 0 5 2 8 0 5 2 8 0" fill="none" stroke="currentColor" stroke-width="2.4"/>' },
-  { id: "freins", nom: "Freins", couleur: "rouge", urgence: 3, service: "freins",
+  { id: "freins", nom: "Freins", couleur: "rouge", urgence: 3,
     titre: "Système de freinage", texte: "Le frein de stationnement est peut-être encore serré. Sinon, le niveau de liquide de frein est bas, souvent signe de plaquettes usées ou d'une fuite. Si le témoin reste allumé, ne roulez pas.",
     svg: '<circle cx="27" cy="21" r="12" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M27 14v9" stroke="currentColor" stroke-width="3"/><circle cx="27" cy="27.5" r="1.8" fill="currentColor"/><path d="M11 9a17 17 0 0 0 0 24M43 9a17 17 0 0 1 0 24" fill="none" stroke="currentColor" stroke-width="2.6"/>' },
-  { id: "abs", nom: "ABS", couleur: "orange", urgence: 2, service: "diagnostic",
+  { id: "abs", nom: "ABS", couleur: "orange", urgence: 2,
     titre: "Antiblocage (ABS)", texte: "Vos freins fonctionnent, mais sans l'antiblocage : les roues peuvent bloquer lors d'un freinage d'urgence, surtout sur la neige. Faites vérifier le capteur bientôt.",
     svg: '<circle cx="27" cy="21" r="12" fill="none" stroke="currentColor" stroke-width="2.6"/><text x="27" y="25.5" text-anchor="middle" font-size="11" font-weight="800" font-family="Archivo, sans-serif" fill="currentColor">ABS</text><path d="M11 9a17 17 0 0 0 0 24M43 9a17 17 0 0 1 0 24" fill="none" stroke="currentColor" stroke-width="2.6"/>' },
-  { id: "pneus", nom: "Pression des pneus", couleur: "orange", urgence: 1, service: "pneus",
+  { id: "pneus", nom: "Pression des pneus", couleur: "orange", urgence: 1,
     titre: "Pression des pneus basse", texte: "Un pneu manque d'air. Au Québec, c'est courant aux premiers froids : la pression baisse avec la température. Gonflez à la pression indiquée dans le cadre de la portière ; si ça revient, c'est peut-être une crevaison lente.",
     svg: '<path d="M14 10c-5 6-5 18 0 24h26c5-6 5-18 0-24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M27 14v11" stroke="currentColor" stroke-width="3"/><circle cx="27" cy="30" r="1.8" fill="currentColor"/><path d="M12 38h30" stroke="currentColor" stroke-width="2.6" stroke-dasharray="3 3"/>' },
 ];
 
 let choixDec = null;
-function prixDe(item) {
-  if (item.prix) return `${item.prix} <small>en général</small>`;
-  const s = SERVICES.find((x) => x.id === item.service);
-  return s ? `${s.min} – ${s.max} $ <small>avant taxes · ${s.nom.toLowerCase()}</small>` : "";
-}
 function verdict(item) {
   choixDec = item;
   const [cls, lib] = URGENCES[item.urgence];
   const u = $("#v-urgence"); u.className = "urgence " + cls; u.textContent = lib;
-  $("#v-titre").textContent = item.titre; $("#v-texte").textContent = item.texte; $("#v-prix").innerHTML = prixDe(item);
+  $("#v-titre").textContent = item.titre; $("#v-texte").textContent = item.texte;
 }
 $("#v-rdv").addEventListener("click", () => {
   if (!choixDec) return;
-  $("#f-service").value = choixDec.service && SERVICES.some((s) => s.id === choixDec.service) ? choixDec.service : "autre";
+  $("#f-service").value = "mecanique";
   $("#f-msg").value = (choixDec.nom ? `Problème repéré avec le décodeur : ${choixDec.nom.toLowerCase()}.` : "");
 });
 
@@ -962,9 +886,9 @@ const GALERIE = [
   { id: "huile", titre: "Vidange d'huile", court: "Entretien", dessin: "huile",
     texte: "Huile noire et épaisse, bien après l'intervalle prévu. Vidange à l'huile synthétique 5W-30, filtre neuf et niveaux complétés.",
     mesures: [["Retard", "4 200 km", "mauvais"], ["Prochaine", "+8 000 km", "bon"]] },
-  { id: "pneus", titre: "Pneus d'hiver", court: "Pneus", dessin: "pneu",
-    texte: "Bande de roulement presque à l'indicateur d'usure : peu d'adhérence sur la neige. Pneus neufs posés, balancés et serrés au couple prescrit.",
-    mesures: [["Sculpture", "2 mm", "mauvais"], ["Neuf", "10 mm", "bon"]] },
+  { id: "carrosserie", titre: "Portière bosselée", court: "Carrosserie", dessin: "carrosserie",
+    texte: "Bosse dans la portière, éraflures et rouille au bas de la caisse à cause du sel. Bosse redressée, rouille traitée et peinture retouchée.",
+    mesures: [["Rouille", "à traiter", "mauvais"], ["Fini", "uni", "bon"]] },
   { id: "filtre", titre: "Filtre à air", court: "Entretien", dessin: "filtre",
     texte: "Filtre bouché par la poussière et des débris : le moteur respire mal et consomme plus. Remplacé en quelques minutes.",
     mesures: [["Débit d'air", "réduit", "mauvais"], ["Débit d'air", "normal", "bon"]] },
@@ -1044,42 +968,43 @@ const DESSINS = {
     c.fillStyle = apres ? "#b96f0a" : "#0f1e33"; c.font = "800 30px 'Big Shoulders Display', sans-serif"; c.textAlign = "left";
     c.fillText(apres ? "5W-30 · NEUVE" : "USÉE · NOIRE", 350, 380);
   },
-  pneu(c, apres) {
-    const R = hasard(11);
-    fond(c, "#1d2636", "#0d131d");
-    const x0 = 40, x1 = 760, y0 = 50, y1 = 450;
-    const t = c.createLinearGradient(x0, 0, x1, 0);
-    t.addColorStop(0, "#15171b"); t.addColorStop(.5, apres ? "#34373e" : "#3e4047"); t.addColorStop(1, "#15171b");
-    c.fillStyle = t; rr(c, x0, y0, x1 - x0, y1 - y0, 40); c.fill();
-    const rainures = [190, 330, 470, 610], larg = apres ? 40 : 22;
-    rainures.forEach((x) => {
-      const g = c.createLinearGradient(x - larg / 2, 0, x + larg / 2, 0);
-      g.addColorStop(0, apres ? "#050607" : "#23252a"); g.addColorStop(.5, apres ? "#0d0e11" : "#2c2e33"); g.addColorStop(1, apres ? "#050607" : "#23252a");
-      c.fillStyle = g; c.fillRect(x - larg / 2, y0, larg, y1 - y0);
-    });
-    // lamelles
-    c.strokeStyle = apres ? "rgba(0,0,0,.85)" : "rgba(0,0,0,.25)"; c.lineWidth = apres ? 3 : 1.5;
-    const blocs = [x0 + 30, ...rainures, x1 - 30];
-    for (let b = 0; b < blocs.length - 1; b++) {
-      const a = blocs[b] + larg / 2 + 10, z = blocs[b + 1] - larg / 2 - 10;
-      for (let y = y0 + 34; y < y1 - 20; y += 46) {
-        c.beginPath(); c.moveTo(a, y);
-        for (let x = a; x <= z; x += 12) c.lineTo(x, y + ((x - a) / 12 % 2 ? 7 : -7));
-        c.stroke();
+  carrosserie(c, apres) {
+    const R = hasard(9), forme = () => rr(c, 60, 60, 680, 380, [70, 30, 24, 24]);
+    fond(c, "#cfd6df", "#8d99a8");
+    c.fillStyle = "rgba(15,30,51,.15)"; c.fillRect(-400, 440, 1600, 200);
+    // panneau de portière
+    c.save(); c.shadowColor = "rgba(15,30,51,.45)"; c.shadowBlur = 36; c.shadowOffsetY = 16;
+    const p = c.createLinearGradient(0, 60, 0, 440);
+    p.addColorStop(0, "#2f72bd"); p.addColorStop(.45, "#1b4f8e"); p.addColorStop(.55, "#123b6c"); p.addColorStop(1, "#0b284c");
+    forme(); c.fillStyle = p; c.fill(); c.restore();
+    c.save(); forme(); c.clip();
+    // ligne de caisse et poignée
+    c.strokeStyle = "rgba(255,255,255,.2)"; c.lineWidth = 3; c.beginPath(); c.moveTo(60, 230); c.lineTo(740, 214); c.stroke();
+    c.strokeStyle = "rgba(0,0,0,.28)"; c.beginPath(); c.moveTo(60, 234); c.lineTo(740, 218); c.stroke();
+    rr(c, 540, 160, 124, 28, 14); c.fillStyle = "#0a1f3a"; c.fill();
+    rr(c, 548, 165, 108, 8, 4); c.fillStyle = "rgba(255,255,255,.28)"; c.fill();
+    // reflets
+    c.fillStyle = apres ? "rgba(255,255,255,.2)" : "rgba(255,255,255,.07)";
+    c.beginPath(); c.moveTo(130, 60); c.lineTo(270, 60); c.lineTo(150, 440); c.lineTo(10, 440); c.fill();
+    c.beginPath(); c.moveTo(310, 60); c.lineTo(350, 60); c.lineTo(230, 440); c.lineTo(190, 440); c.fill();
+    if (!apres) {
+      // bosse
+      const d = c.createRadialGradient(330, 312, 8, 345, 305, 130);
+      d.addColorStop(0, "rgba(0,0,0,.6)"); d.addColorStop(.6, "rgba(0,0,0,.25)"); d.addColorStop(1, "rgba(0,0,0,0)");
+      c.fillStyle = d; c.beginPath(); c.ellipse(345, 305, 135, 82, -.15, 0, 7); c.fill();
+      c.strokeStyle = "rgba(255,255,255,.4)"; c.lineWidth = 4; c.beginPath(); c.ellipse(350, 300, 96, 56, -.15, 3.6, 5.6); c.stroke();
+      // éraflures
+      c.strokeStyle = "rgba(225,232,240,.75)"; c.lineCap = "round";
+      for (let i = 0; i < 9; i++) { const x = 110 + R() * 130, y = 130 + R() * 60; c.lineWidth = 1 + R() * 2.5; c.beginPath(); c.moveTo(x, y); c.lineTo(x + 170 + R() * 170, y + 10 + R() * 30); c.stroke(); }
+      // rouille au bas de caisse
+      for (let i = 0; i < 220; i++) {
+        const x = 60 + R() * 680, y = 438 - Math.pow(R(), 2) * (x < 260 ? 90 : 45);
+        c.fillStyle = ["rgba(150,70,25,.85)", "rgba(110,48,18,.8)", "rgba(190,105,45,.7)"][i % 3];
+        c.beginPath(); c.arc(x, y, 2 + R() * 9, 0, 7); c.fill();
       }
+    } else {
+      c.fillStyle = "rgba(255,255,255,.5)"; c.fillRect(60, 62, 680, 3);
     }
-    if (!apres) { c.fillStyle = "rgba(255,255,255,.06)"; c.fillRect(x0, 200, x1 - x0, 90); for (let i = 0; i < 80; i++) { c.fillStyle = "rgba(255,255,255,.05)"; c.fillRect(x0 + R() * 700, y0 + R() * 390, 20 + R() * 60, 2); } }
-    // jauge de profondeur
-    c.save(); c.translate(470, 250);
-    c.shadowColor = "rgba(0,0,0,.6)"; c.shadowBlur = 20;
-    rr(c, 36, -120, 210, 240, 14); c.fillStyle = "#f5c400"; c.fill(); c.shadowBlur = 0;
-    c.fillStyle = "#0f1e33"; rr(c, 56, -98, 170, 84, 8); c.fill();
-    c.fillStyle = apres ? "#3cc47a" : "#ff6b57"; c.font = "800 64px 'Big Shoulders Display', sans-serif"; c.textAlign = "center";
-    c.fillText(apres ? "10 mm" : "2 mm", 141, -33);
-    c.fillStyle = "#0f1e33"; c.font = "600 15px 'JetBrains Mono', monospace";
-    c.fillText("PROFONDEUR", 141, 18);
-    for (let i = 0; i <= 10; i++) c.fillRect(64 + i * 15.4, 40, 2, i % 5 ? 14 : 24);
-    c.fillStyle = "#c9ced5"; c.fillRect(-4, -20, 40, 10); c.fillRect(-4, -20, 8, 30 + (apres ? 40 : 6));
     c.restore();
   },
   filtre(c, apres) {
@@ -1160,49 +1085,19 @@ let attente;
 new ResizeObserver(() => { clearTimeout(attente); attente = setTimeout(() => afficher(casActif), 120); }).observe(baEl);
 document.fonts && document.fonts.ready.then(() => { afficher(casActif); vignettes(); });
 
-// Estimateur
-$("#checks").innerHTML = SERVICES.map((s) => `
-  <label class="check" for="c-${s.id}"><input type="checkbox" id="c-${s.id}" value="${s.id}" ${["vidange", "freins"].includes(s.id) ? "checked" : ""}><span>${s.nom}</span><em>${s.min}–${s.max} $</em></label>`).join("");
-$("#bon-date").textContent = new Date().toLocaleDateString("fr-CA", { day: "numeric", month: "long", year: "numeric" });
-function choisis() { return SERVICES.filter((s) => $("#c-" + s.id).checked); }
-function calculer() {
-  const k = parseFloat(document.querySelector("input[name=vehicule]:checked").value);
-  const sel = choisis();
-  if (!sel.length) {
-    $("#bon-lignes").innerHTML = '<p class="bon-empty">Cochez au moins un service.</p>';
-    $("#bon-tot").innerHTML = "";
-    return;
-  }
-  let a = 0, b = 0;
-  $("#bon-lignes").innerHTML = sel.map((s) => {
-    const mi = rond(s.min * k), ma = rond(s.max * k); a += mi; b += ma;
-    return `<div class="bon-row"><span>${s.nom}</span><span>${mi} – ${ma} $</span></div>`;
-  }).join("");
-  $("#bon-tot").innerHTML = `
-    <span>Sous-total</span><span>${argent(a)} – ${argent(b)}</span>
-    <span>TPS + TVQ</span><span>${argent(a * TAXES)} – ${argent(b * TAXES)}</span>
-    <span class="grand">Total estimé</span><span class="grand">${Math.round(a * (1 + TAXES))} – ${Math.round(b * (1 + TAXES))} $</span>`;
-}
-document.querySelectorAll("#checks input, input[name=vehicule]").forEach((i) => i.addEventListener("change", calculer));
-calculer();
-
-// Pneus d'hiver : 1er décembre au 15 mars
+// Saison : avant l'hiver (jusqu'au 1er décembre), puis jusqu'au printemps (15 mars)
 (function () {
   const auj = new Date(); auj.setHours(0, 0, 0, 0);
   const an = auj.getFullYear();
   const debut = new Date(an, 11, 1), finA = new Date(an, 2, 15);
   const jours = (d) => Math.ceil((d - auj) / 864e5);
-  if (auj <= finA) {
-    $("#saison-jours").textContent = jours(finA);
-    $("#saison-unite").textContent = "jours";
-    $("#saison-texte").textContent = "Les pneus d'hiver sont obligatoires jusqu'au 15 mars. Pensez à réserver votre pose de pneus d'été dès maintenant.";
-  } else if (auj < debut) {
+  if (auj > finA && auj < debut) {
     $("#saison-jours").textContent = jours(debut);
-    $("#saison-texte").textContent = "avant l'obligation des pneus d'hiver au Québec (1er décembre au 15 mars). Les rendez-vous partent vite : réservez votre pose.";
+    $("#saison-texte").textContent = "avant le 1er décembre.";
   } else {
-    const fin = new Date(an + 1, 2, 15);
-    $("#saison-jours").textContent = jours(fin);
-    $("#saison-texte").textContent = "Les pneus d'hiver sont obligatoires jusqu'au 15 mars. Vos pneus sont-ils encore assez profonds ?";
+    $("#saison-titre").textContent = "En plein hiver";
+    $("#saison-jours").textContent = jours(auj <= finA ? finA : new Date(an + 1, 2, 15));
+    $("#saison-texte").textContent = "avant le printemps (15 mars).";
   }
 })();
 
@@ -1229,10 +1124,6 @@ vidange();
 // Rendez-vous
 $("#f-service").innerHTML = SERVICES.map((s) => `<option value="${s.id}">${s.nom}</option>`).join("") + '<option value="autre">Autre / je ne sais pas</option>';
 document.querySelectorAll("[data-service]").forEach((a) => a.addEventListener("click", () => { $("#f-service").value = a.dataset.service; }));
-$("#bon-rdv").addEventListener("click", () => {
-  const sel = choisis();
-  if (sel.length) { $("#f-service").value = sel[0].id; $("#f-msg").value = "Travaux estimés en ligne : " + sel.map((s) => s.nom).join(", ") + "."; }
-});
 $("#form").addEventListener("submit", (e) => {
   e.preventDefault();
   const champs = ["#f-nom", "#f-tel", "#f-auto"], vide = champs.find((s) => !$(s).value.trim());
