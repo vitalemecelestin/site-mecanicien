@@ -1,46 +1,15 @@
-# ED-mécanique
+# ED-mécanique (ancienne adresse)
 
-Site vitrine du garage ED-mécanique : **mécanique générale et carrosserie**. Prix fait sur place, après inspection.
-Sur rendez-vous ou premier arrivé, premier servi. Paiement comptant seulement.
+Le site du garage ED-mécanique (mécanique générale et carrosserie) a déménagé :
+**https://ed-mecanique.github.io/**. Tout le site est maintenant dans le dépôt `ed-mecanique/ed-mecanique.github.io`.
 
-En ligne : https://vitalemecelestin.github.io/site-mecanicien/ (GitHub Pages, dossier `docs/`).
+Ce dépôt ne sert plus qu'à rediriger l'ancienne adresse, https://vitalemecelestin.github.io/site-mecanicien/, vers la
+nouvelle. `docs/index.html` envoie aussitôt le visiteur sur ed-mecanique.github.io, en gardant l'ancre (par exemple
+`#contact`), et demande à Google de ne pas référencer l'ancienne adresse.
 
 ```
-docs/index.html             la page (une seule page, avec des sections)
-docs/assets/css/style.css   le style : rouge, noir et blanc, typographie Barlow
-docs/assets/js/site.js      menu mobile, en-tête au défilement, formulaire qui prépare un texto
-docs/assets/img/            logo (favicon.svg) et photos (WebP)
-ancien-site/                l'ancienne version de démonstration, gardée pour mémoire
+docs/index.html   la page de redirection (GitHub Pages, dossier docs/)
+ancien-site/      l'ancienne version de démonstration, gardée pour mémoire
 ```
 
-Site statique, sans dépendance à installer. Pour le voir sur son poste :
-
-```powershell
-python -m http.server 5120 --directory docs
-```
-
-## Coordonnées affichées
-
-- Téléphone et texto : **438 764-7365** (`docs/index.html` : rechercher `764-7365` et `4387647365` ;
-  `docs/assets/js/site.js` : `TELEPHONE` et les deux messages).
-- Heures : **de 8 h à 18 h**. Les jours ne sont pas encore précisés : le site n'en affiche pas, et les données
-  pour Google n'ont pas d'`openingHours`.
-- Paiement : **comptant seulement**.
-- Adresse : **10570, avenue Éthier, Montréal**, avec un lien « Itinéraire » vers Google Maps.
-
-La ligne `<meta name="robots" content="noindex">` de `docs/index.html` demande à Google de ne pas référencer le site
-tant qu'il est à une adresse web qui contient le nom de la personne qui l'a créé. La retirer une fois le site à son
-adresse définitive.
-
-## Le formulaire de rendez-vous
-
-Aucun serveur et aucune donnée stockée. Sur téléphone, le bouton « Envoyer ma demande par texto » ouvre l'appli
-Messages du client avec la demande déjà écrite (nom, téléphone, véhicule, service, date, remarques) : le client touche
-Envoyer, et la demande arrive dans les textos du garage, avec le numéro du client pour lui répondre. Sur ordinateur,
-le client copie le message.
-
-## Photos
-
-Photos libres de droits (licence Unsplash : usage gratuit, y compris commercial ; les auteurs sont cités dans le pied
-de page) : Zanelle Lofty-Eaton, Christian Buehner, Zoshua Colah, Clark Van Der Beken, Tahamie Farooqui.
-Aucune ne montre le visage d'une personne. Le mieux reste de les remplacer par de vraies photos de l'atelier.
+Pour modifier le site, travailler dans le dépôt `ed-mecanique/ed-mecanique.github.io`, pas ici.
