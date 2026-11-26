@@ -222,6 +222,13 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; z-index: 51; heigh
 .coordonnees span { font-weight: 600; }
 .coordonnees a { font: 700 1.6rem/1.2 var(--police-titre); letter-spacing: .03em; text-decoration: none; }
 .coordonnees a:hover { color: var(--rouge); }
+.coordonnees a.lien-carte {
+  display: inline-flex; align-items: center; gap: .4em; margin-top: 8px;
+  font: 700 .95rem/1 var(--police-titre); letter-spacing: .08em; text-transform: uppercase; color: var(--rouge);
+}
+.coordonnees a.lien-carte .i { width: 1em; height: 1em; margin: 0; color: currentColor; stroke-width: 2.2; }
+.coordonnees a.lien-carte:hover { text-decoration: underline; text-underline-offset: 3px; }
+.coordonnees li > span { display: flex; flex-direction: column; align-items: flex-start; }
 .heures { width: 100%; margin-top: 26px; border-collapse: collapse; }
 .heures caption { display: flex; align-items: center; gap: 10px; padding-bottom: 10px; text-align: left; font: 700 1.05rem/1 var(--police-titre); letter-spacing: .08em; text-transform: uppercase; }
 .heures caption .i { color: var(--rouge); }

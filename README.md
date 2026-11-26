@@ -26,10 +26,11 @@ python -m http.server 5120 --directory docs
 - Heures : **de 8 h à 18 h**. Les jours ne sont pas encore précisés : le site n'en affiche pas, et les données
   pour Google n'ont pas d'`openingHours`.
 - Paiement : **comptant seulement**.
-- Secteur : « Montréal et environs », **provisoire**.
+- Adresse : **10570, avenue Éthier, Montréal**, avec un lien « Itinéraire » vers Google Maps.
 
-Tant que le secteur ou l'adresse ne sont pas confirmés, la ligne `<meta name="robots" content="noindex">`
-de `docs/index.html` demande à Google de ne pas référencer le site. La retirer à ce moment-là.
+La ligne `<meta name="robots" content="noindex">` de `docs/index.html` demande à Google de ne pas référencer le site
+tant qu'il est à une adresse web qui contient le nom de la personne qui l'a créé. La retirer une fois le site à son
+adresse définitive.
 
 ## Le formulaire de rendez-vous
 
