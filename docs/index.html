@@ -1,1156 +1,319 @@
 <!doctype html>
-<html lang="fr">
-<meta name="robots" content="noindex">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>E mécanique</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Mécanique générale et carrosserie. Prix fait sur place, après inspection. Bon prix. Bon travail. Bonne route.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Big+Shoulders+Display:wght@700;800;900&family=JetBrains+Mono:wght@400;600&display=swap">
-<style>
-/* Mise en page : affiche d'atelier. Bleu « salopette » + jaune haute visibilité, le bon de travail comme fil conducteur. */
-:root {
-  --bg: #eef1f5;
-  --surface: #ffffff;
-  --surface-2: #e3e8ef;
-  --ink: #0f1e33;
-  --muted: #4b5b72;
-  --line: #c9d2de;
-  --navy: #13284a;
-  --navy-ink: #f2f5f9;
-  --hv: #f5c400;
-  --hv-ink: #0f1e33;
-  --red: #d23a2a;
-  --ok: #1f8a4c;
-  --f-display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
-  --f-body: "Archivo", "Segoe UI", system-ui, sans-serif;
-  --f-mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
-  --radius: 6px;
-  --wrap: 1180px;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0a1322; --surface: #111e33; --surface-2: #172742; --ink: #e8edf5; --muted: #9aa9bf;
-    --line: #26385a; --navy: #0d1a30; --navy-ink: #f2f5f9; --hv: #f5c400; --hv-ink: #0f1e33;
-    --red: #ff6b57; --ok: #3cc47a; color-scheme: dark;
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Tant que le vrai numéro et l'adresse ne sont pas en place, on demande aux moteurs de recherche de ne pas
+       indexer le site (à retirer au lancement, voir README.md). -->
+  <meta name="robots" content="noindex">
+  <title>ED-mécanique | Mécanique générale et carrosserie</title>
+  <meta name="description" content="ED-mécanique : mécanique générale et carrosserie. Prix fait sur place, après inspection. Sur rendez-vous ou premier arrivé, premier servi.">
+  <meta name="theme-color" content="#d52b1e">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ED-mécanique | Mécanique générale et carrosserie">
+  <meta property="og:description" content="Pas très cher et bon travail garanti. Prix fait sur place, après inspection.">
+  <meta property="og:image" content="assets/img/accueil-1600.webp">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "ED-mécanique",
+    "slogan": "Pas très cher et bon travail garanti",
+    "telephone": "+1-438-764-7365",
+    "areaServed": "Montréal et environs",
+    "currenciesAccepted": "CAD",
+    "paymentAccepted": "Comptant",
+    "makesOffer": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mécanique générale"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Carrosserie"}}
+    ]
   }
-}
-:root[data-theme="dark"] {
-  --bg: #0a1322; --surface: #111e33; --surface-2: #172742; --ink: #e8edf5; --muted: #9aa9bf;
-  --line: #26385a; --navy: #0d1a30; --navy-ink: #f2f5f9; --hv: #f5c400; --hv-ink: #0f1e33;
-  --red: #ff6b57; --ok: #3cc47a; color-scheme: dark;
-}
+  </script>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-cle" viewBox="0 0 24 24"><path d="M15.5 3.5a4.5 4.5 0 0 0-4.3 5.9l-7.4 7.4a1.9 1.9 0 0 0 2.7 2.7l7.4-7.4a4.5 4.5 0 0 0 5.9-4.3l-2.9 2.9-2.4-.6-.6-2.4z"/></symbol>
+  <symbol id="i-auto" viewBox="0 0 24 24"><path d="M3 16v-3.2l2-.8 2.3-4.1A2 2 0 0 1 9 7h6.2a2 2 0 0 1 1.6.8L19.6 12l1.4.6V16a1 1 0 0 1-1 1h-1.2M7.2 17H4a1 1 0 0 1-1-1M10.8 17h4.4M6 12h13.6"/><circle cx="9" cy="17" r="1.8"/><circle cx="17" cy="17" r="1.8"/></symbol>
+  <symbol id="i-bon" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="1.5"/><path d="M9 4V2.8h6V4M9 13l2 2 4-4.2"/></symbol>
+  <symbol id="i-oeil" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></symbol>
+  <symbol id="i-bouclier" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.4 3.1 8 7.5 9.5 4.4-1.5 7.5-5.1 7.5-9.5V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></symbol>
+  <symbol id="i-accord" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="m8.5 12.3 2.4 2.4 4.8-5"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24"><path d="M6.6 3.5h2.6l1.4 4.1-2 1.3a11 11 0 0 0 6.5 6.5l1.3-2 4.1 1.4v2.6a1.6 1.6 0 0 1-1.7 1.6A16.6 16.6 0 0 1 5 5.2a1.6 1.6 0 0 1 1.6-1.7z"/></symbol>
+  <symbol id="i-heure" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-lieu" viewBox="0 0 24 24"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+  <symbol id="i-texto" viewBox="0 0 24 24"><path d="M4 5h16v11H9.5L4 20z"/><path d="M8 9.5h8M8 12.5h5"/></symbol>
+  <symbol id="i-argent" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="1.5"/><circle cx="12" cy="12" r="2.7"/><path d="M6 9.5v5M18 9.5v5"/></symbol>
+  <symbol id="i-fleche" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-coche" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+</svg>
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.6; }
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: var(--navy); }
-.wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-h1, h2, h3 { font-family: var(--f-display); line-height: .95; text-wrap: balance; margin: 0; letter-spacing: .01em; }
-h2 { font-size: clamp(2.4rem, 5vw, 3.8rem); text-transform: uppercase; }
-h3 { font-size: 1.6rem; text-transform: uppercase; }
-p { margin: 0; }
-a { color: inherit; }
-:focus-visible { outline: 3px solid var(--hv); outline-offset: 3px; }
-.eyebrow { font-family: var(--f-mono); font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: .6rem; }
-.eyebrow::before { content: ""; width: 22px; height: 6px; background: repeating-linear-gradient(-45deg, var(--hv) 0 4px, var(--ink) 4px 8px); }
-.lead { color: var(--muted); font-size: 1.08rem; max-width: 60ch; }
-section { padding-block: clamp(4rem, 9vw, 7rem); }
-.sec-head { display: grid; gap: 1rem; margin-bottom: 2.6rem; }
+<a class="evitement" href="#contenu">Aller au contenu</a>
 
-.btn { display: inline-flex; align-items: center; gap: .55rem; font: 700 1rem/1 var(--f-body); padding: .95rem 1.3rem; border-radius: var(--radius); border: 2px solid transparent; text-decoration: none; cursor: pointer; transition: transform .15s ease, background .15s ease; }
-.btn:hover { transform: translateY(-2px); }
-.btn-hv { background: var(--hv); color: var(--hv-ink); }
-.btn-ghost { border-color: currentColor; color: inherit; background: transparent; }
-.btn svg { width: 18px; height: 18px; }
+<div class="barre-haut">
+  <div class="conteneur barre-haut-in">
+    <p><strong>Sur rendez-vous</strong> ou <strong>premier arrivé, premier servi</strong></p>
+    <p class="barre-haut-droite">
+      <span class="barre-heures"><svg class="i"><use href="#i-heure"/></svg>De 8&nbsp;h à 18&nbsp;h</span>
+      <a href="tel:+14387647365"><svg class="i"><use href="#i-tel"/></svg>438&nbsp;764-7365</a>
+    </p>
+  </div>
+</div>
 
-/* En-tête */
-.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: var(--navy); color: var(--navy-ink); border-bottom: 4px solid var(--hv); }
-.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 68px; }
-.logo { display: flex; align-items: center; gap: .7rem; text-decoration: none; }
-.logo-mark { width: 40px; height: 40px; }
-.logo b { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; letter-spacing: .02em; }
-.logo small { display: block; font: 600 .66rem/1 var(--f-mono); letter-spacing: .16em; opacity: .7; text-transform: uppercase; margin-top: 3px; }
-.nav { display: flex; gap: 1.4rem; align-items: center; }
-.nav a { text-decoration: none; font-weight: 600; font-size: .95rem; opacity: .85; }
-.nav a:hover { opacity: 1; color: var(--hv); }
-.nav .btn { opacity: 1; padding: .7rem 1rem; }
-.burger { display: none; background: none; border: 2px solid var(--navy-ink); color: var(--navy-ink); border-radius: var(--radius); padding: .45rem .6rem; font: 700 .85rem var(--f-mono); cursor: pointer; }
-@media (max-width: 860px) {
-  .burger { display: block; }
-  .nav { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; background: var(--navy); padding: .5rem max(16px, env(safe-area-inset-right, 0px)) 1rem max(16px, env(safe-area-inset-left, 0px)); border-bottom: 4px solid var(--hv); }
-  .nav a { padding: .8rem 0; border-bottom: 1px solid rgba(255,255,255,.08); }
-  .nav .btn { margin-top: .8rem; justify-content: center; }
-  .nav:not(.open) { display: none; }
-}
-
-/* Héros */
-.hero { background: var(--navy); color: var(--navy-ink); position: relative; overflow: hidden; padding-block: clamp(3rem, 7vw, 5.5rem) clamp(3.5rem, 8vw, 6rem); }
-.hero::after { content: ""; position: absolute; inset: auto 0 0; height: 14px; background: repeating-linear-gradient(-45deg, var(--hv) 0 18px, #0f1e33 18px 36px); }
-.hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
-.hero-grid > * { min-width: 0; }
-.hero .eyebrow { color: rgba(242,245,249,.7); }
-.hero .eyebrow::before { background: repeating-linear-gradient(-45deg, var(--hv) 0 4px, transparent 4px 8px); }
-.slogan { font-size: clamp(3.4rem, 9vw, 7.4rem); text-transform: uppercase; margin-top: 1.2rem; line-height: .86; }
-.slogan span { display: block; }
-.slogan span:nth-child(3) { color: var(--hv); }
-.slogan span { animation: entre .7s cubic-bezier(.2,.8,.2,1) both; }
-.slogan span:nth-child(2) { animation-delay: .12s; }
-.slogan span:nth-child(3) { animation-delay: .24s; }
-@keyframes entre { from { transform: translateY(18px); } }
-.hero .lead { color: rgba(242,245,249,.78); margin-top: 1.6rem; }
-.hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
-.accueil-badge { display: inline-flex; flex-wrap: wrap; gap: .3rem; align-items: center; margin-top: 1.6rem; padding: .55rem .9rem; border: 2px dashed rgba(245,196,0,.6); border-radius: var(--radius); font-size: .95rem; color: rgba(242,245,249,.85); }
-.accueil-badge b { color: var(--hv); }
-.sans-rdv { display: grid; gap: .2rem; margin-top: 1.4rem; padding: 1rem 1.2rem; background: var(--hv); color: var(--hv-ink); border-radius: var(--radius); }
-.sans-rdv b { font: 900 1.6rem/1 var(--f-display); text-transform: uppercase; }
-.sans-rdv span { font-size: .9rem; }
-.hero-facts { display: flex; flex-wrap: wrap; gap: .5rem 1.6rem; margin-top: 2.2rem; font: 600 .82rem var(--f-mono); color: rgba(242,245,249,.75); }
-.hero-facts span::before { content: "✓ "; color: var(--hv); }
-
-.gauge-card { position: relative; }
-.gauge { width: 100%; max-width: 440px; display: block; margin: 0 auto; }
-.gauge .tick { stroke: rgba(242,245,249,.55); }
-.gauge .tick.major { stroke: var(--navy-ink); }
-.gauge text { fill: var(--navy-ink); font-family: var(--f-display); font-weight: 800; }
-.gauge .unit { font-family: var(--f-mono); font-weight: 600; fill: rgba(242,245,249,.6); }
-#aiguille { transform-origin: 200px 200px; transform: rotate(-120deg); transition: transform 1.6s cubic-bezier(.3,1.4,.4,1); }
-.ticket { position: absolute; right: 0; bottom: -14px; width: min(250px, 62%); background: var(--surface); color: var(--ink); border-radius: 4px; padding: 1rem 1.1rem .9rem; box-shadow: 0 18px 40px rgba(0,0,0,.35); transform: rotate(3deg); font-family: var(--f-mono); font-size: .74rem; }
-.ticket::before { content: ""; position: absolute; inset: -7px 0 auto; height: 8px; background: radial-gradient(circle at 6px 0, transparent 5px, var(--surface) 5.5px) 0 0 / 12px 8px repeat-x; }
-.ticket h4 { margin: 0 0 .6rem; font: 900 1.05rem var(--f-display); text-transform: uppercase; letter-spacing: .04em; display: flex; justify-content: space-between; }
-.ticket h4 em { font: 600 .7rem var(--f-mono); color: var(--muted); font-style: normal; }
-.ticket .l { display: flex; justify-content: space-between; gap: .5rem; padding: .25rem 0; border-bottom: 1px dashed var(--line); }
-.ticket .l b { font-weight: 600; }
-.ticket .stamp { margin-top: .6rem; display: inline-block; border: 2px solid var(--ok); color: var(--ok); padding: .1rem .5rem; font-weight: 600; letter-spacing: .1em; transform: rotate(-4deg); }
-
-/* Engagements */
-.promesses { background: var(--hv); color: var(--hv-ink); padding-block: 0; }
-.promesses .wrap { display: grid; grid-template-columns: repeat(4, 1fr); }
-.promesse { padding: 1.6rem 1.2rem; display: grid; gap: .35rem; border-right: 2px solid rgba(15,30,51,.15); }
-.promesse:last-child { border-right: 0; }
-.promesse b { font: 800 1.25rem/1.05 var(--f-display); text-transform: uppercase; }
-.promesse span { font-size: .9rem; opacity: .85; }
-@media (max-width: 860px) { .promesses .wrap { grid-template-columns: 1fr 1fr; } .promesse:nth-child(2) { border-right: 0; } .promesse:nth-child(-n+2) { border-bottom: 2px solid rgba(15,30,51,.15); } }
-@media (max-width: 460px) { .promesses .wrap { grid-template-columns: 1fr; } .promesse { border-right: 0; border-bottom: 2px solid rgba(15,30,51,.15); } .promesse:last-child { border-bottom: 0; } }
-
-/* Services */
-.services { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
-.service { background: var(--surface); padding: 1.6rem 1.4rem 1.5rem; display: grid; gap: .7rem; align-content: start; position: relative; transition: background .2s; }
-.service:hover { background: var(--surface-2); }
-.service svg { width: 42px; height: 42px; color: var(--ink); }
-.service svg .hv { color: var(--hv); fill: var(--hv); }
-.service p { color: var(--muted); font-size: .93rem; }
-.spec { font: 600 .72rem var(--f-mono); letter-spacing: .04em; color: var(--ink); background: var(--surface-2); border-radius: 3px; padding: .3rem .5rem; justify-self: start; }
-.service:hover .spec { background: var(--hv); color: var(--hv-ink); }
-.service { padding: 2.2rem 2rem 2rem; }
-.service svg { width: 56px; height: 56px; }
-.service h3 { font-size: 2.1rem; }
-.service ul { margin: 0; padding: 0; list-style: none; display: grid; gap: .35rem; }
-.service li { display: flex; gap: .55rem; align-items: baseline; font-size: .95rem; }
-.service li::before { content: ""; flex: none; width: 8px; height: 8px; background: var(--hv); transform: translateY(-1px); }
-.prix-place { font: 700 .82rem var(--f-mono); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
-@media (max-width: 700px) { .services { grid-template-columns: 1fr; } }
-
-/* Avant / après */
-.galerie { display: grid; grid-template-columns: 1fr 300px; gap: 1.4rem; align-items: start; }
-.galerie > * { min-width: 0; }
-.ba { position: relative; aspect-ratio: 16 / 10; max-width: 100%; border-radius: var(--radius); overflow: hidden; background: #0f1e33; --pos: 50%; touch-action: pan-y; user-select: none; }
-.ba canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-.ba .apres { clip-path: inset(0 0 0 var(--pos)); }
-.ba-ligne { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 3px; margin-left: -1.5px; background: var(--hv); pointer-events: none; }
-.ba-poignee { position: absolute; top: 50%; left: var(--pos); width: 54px; height: 54px; margin: -27px 0 0 -27px; border-radius: 50%; background: var(--hv); color: var(--hv-ink); display: grid; place-items: center; box-shadow: 0 6px 18px rgba(0,0,0,.35); pointer-events: none; transition: transform .15s; }
-.ba-poignee svg { width: 28px; height: 28px; }
-.ba:has(input:focus-visible) .ba-poignee { outline: 3px solid #fff; outline-offset: 3px; }
-.ba input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; -webkit-appearance: none; appearance: none; }
-.ba-tag { position: absolute; top: 14px; font: 600 .74rem var(--f-mono); letter-spacing: .14em; text-transform: uppercase; padding: .35rem .6rem; border-radius: 3px; pointer-events: none; }
-.ba-tag.avant { left: 14px; background: rgba(15,30,51,.82); color: #f2f5f9; }
-.ba-tag.apres { right: 14px; background: var(--hv); color: var(--hv-ink); }
-.ba-info { display: grid; grid-template-columns: 1fr auto; gap: .4rem 1.4rem; margin-top: 1rem; align-items: start; }
-.ba-info h3 { font-size: 1.9rem; }
-.ba-info p { color: var(--muted); grid-column: 1; max-width: 62ch; }
-.ba-mesure { grid-row: span 2; grid-column: 2; display: grid; grid-auto-flow: column; gap: .4rem; }
-.ba-mesure div { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: .5rem .8rem; text-align: center; font-variant-numeric: tabular-nums; }
-.ba-mesure small { display: block; font: 600 .66rem var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
-.ba-mesure b { font: 800 1.5rem var(--f-display); }
-.ba-mesure .bon b { color: var(--ok); }
-.ba-mesure .mauvais b { color: var(--red); }
-.cas { display: grid; gap: .5rem; }
-.cas button { display: grid; grid-template-columns: 64px 1fr; gap: .8rem; align-items: center; text-align: left; background: var(--surface); color: var(--ink); border: 2px solid var(--line); border-radius: var(--radius); padding: .5rem; cursor: pointer; font: inherit; transition: border-color .15s; }
-.cas button:hover { border-color: var(--muted); }
-.cas button[aria-pressed="true"] { border-color: var(--ink); box-shadow: inset 4px 0 0 var(--hv); }
-.cas canvas { width: 64px; height: 44px; border-radius: 3px; display: block; }
-.cas b { display: block; font: 800 1.1rem/1.1 var(--f-display); text-transform: uppercase; }
-.cas small { color: var(--muted); font-size: .8rem; }
-.ba-note { font: .74rem var(--f-mono); color: var(--muted); margin-top: .6rem; }
-@media (max-width: 900px) {
-  .galerie { grid-template-columns: 1fr; }
-  .cas { grid-auto-flow: column; grid-auto-columns: minmax(200px, 1fr); overflow-x: auto; padding-bottom: .4rem; }
-}
-@media (max-width: 520px) { .ba-info { grid-template-columns: 1fr; } .ba-mesure { grid-column: 1; grid-row: auto; justify-content: start; } .ba { aspect-ratio: 4 / 3; } }
-
-/* Décodeur */
-.decodeur { background: var(--navy); color: var(--navy-ink); position: relative; overflow: hidden; }
-.decodeur .eyebrow { color: rgba(242,245,249,.7); }
-.decodeur .eyebrow::before { background: repeating-linear-gradient(-45deg, var(--hv) 0 4px, transparent 4px 8px); }
-.decodeur .lead { color: rgba(242,245,249,.78); }
-.onglets { display: inline-flex; gap: .3rem; background: rgba(255,255,255,.07); padding: .3rem; border-radius: 99px; margin-bottom: 1.8rem; flex-wrap: wrap; }
-.onglets button { font: 700 .95rem var(--f-body); color: inherit; background: none; border: 0; padding: .7rem 1.2rem; border-radius: 99px; cursor: pointer; }
-.onglets button[aria-selected="true"] { background: var(--hv); color: var(--hv-ink); }
-.dec-grid { display: grid; grid-template-columns: 340px 1fr; gap: 1.4rem; align-items: start; }
-.dec-grid > * { min-width: 0; }
-.sons { display: grid; gap: .5rem; }
-.son { display: grid; grid-template-columns: 44px 1fr; gap: .8rem; align-items: center; text-align: left; font: inherit; color: inherit; background: rgba(255,255,255,.05); border: 2px solid rgba(255,255,255,.1); border-radius: var(--radius); padding: .65rem .8rem; cursor: pointer; transition: border-color .15s, background .15s; }
-.son:hover { border-color: rgba(255,255,255,.35); }
-.son[aria-pressed="true"] { border-color: var(--hv); background: rgba(245,196,0,.1); }
-.son .play { width: 44px; height: 44px; border-radius: 50%; background: var(--hv); color: var(--hv-ink); display: grid; place-items: center; }
-.son .play svg { width: 18px; height: 18px; }
-.son.joue .play { animation: pulse 1s infinite; }
-@keyframes pulse { 50% { box-shadow: 0 0 0 8px rgba(245,196,0,.2); } }
-.son b { display: block; font-weight: 700; line-height: 1.25; }
-.son small { font: .74rem var(--f-mono); opacity: .65; }
-.scope-card { background: #07101d; border: 1px solid rgba(255,255,255,.1); border-radius: var(--radius); overflow: hidden; }
-.scope-top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .7rem 1rem; font: 600 .74rem var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: rgba(242,245,249,.6); border-bottom: 1px solid rgba(255,255,255,.08); }
-.scope-top .rec { display: flex; align-items: center; gap: .4rem; }
-.scope-top .rec i { width: 9px; height: 9px; border-radius: 50%; background: #3a4a63; }
-.scope-card.actif .rec i { background: #ff6b57; box-shadow: 0 0 10px #ff6b57; }
-#scope { width: 100%; height: 170px; display: block; }
-.verdict { padding: 1.3rem 1.3rem 1.4rem; display: grid; gap: .8rem; border-top: 1px solid rgba(255,255,255,.08); }
-.verdict h3 { font-size: 1.9rem; }
-.verdict p { color: rgba(242,245,249,.8); max-width: 62ch; }
-.urgence { display: inline-flex; align-items: center; gap: .55rem; font: 700 .82rem var(--f-mono); letter-spacing: .06em; text-transform: uppercase; padding: .4rem .7rem; border-radius: 3px; justify-self: start; }
-.urgence::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: currentColor; }
-.u1 { background: rgba(60,196,122,.16); color: #5fe39a; }
-.u2 { background: rgba(245,196,0,.16); color: #ffd84a; }
-.u3 { background: rgba(255,107,87,.18); color: #ff8a7a; }
-.verdict-bas { display: flex; flex-wrap: wrap; gap: .8rem 1.4rem; align-items: center; }
-.dec-note { font: .72rem var(--f-mono); color: rgba(242,245,249,.5); margin-top: .9rem; }
-.temoins { display: grid; grid-template-columns: repeat(4, 1fr); gap: .6rem; }
-.temoin { display: grid; justify-items: center; gap: .5rem; padding: 1.1rem .6rem; background: #07101d; border: 2px solid rgba(255,255,255,.08); border-radius: var(--radius); color: inherit; font: 600 .82rem var(--f-body); cursor: pointer; text-align: center; transition: border-color .15s; }
-.temoin svg { width: 54px; height: 42px; opacity: .3; transition: opacity .2s, filter .2s; }
-.temoin:hover svg { opacity: .7; }
-.temoin[aria-pressed="true"] { border-color: var(--hv); }
-.temoin[aria-pressed="true"] svg { opacity: 1; filter: drop-shadow(0 0 8px currentColor); }
-.temoin.rouge { color: #ff5a46; }
-.temoin.orange { color: #ffb020; }
-.temoin span { color: var(--navy-ink); }
-.tab-panel[hidden] { display: none !important; }
-@media (max-width: 900px) { .dec-grid { grid-template-columns: 1fr; } .temoins { grid-template-columns: repeat(4, 1fr); } }
-@media (max-width: 520px) { .temoins { grid-template-columns: repeat(2, 1fr); } }
-
-/* Barre d'action mobile */
-.barre-mobile { display: none; }
-@media (max-width: 700px) {
-  .barre-mobile { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; position: fixed; left: 0; right: 0; bottom: 0; z-index: 70; background: var(--navy); border-top: 3px solid var(--hv); padding: .6rem max(12px, env(safe-area-inset-right, 0px)) calc(.6rem + env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px)); }
-  .barre-mobile .btn { justify-content: center; padding: .8rem; }
-  .barre-mobile .btn-ghost { color: var(--navy-ink); }
-  footer { padding-bottom: 6rem; }
-}
-
-/* Fond gris des sections d'outils */
-.devis { background: var(--surface-2); }
-.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.6rem; }
-.panel h3 { margin-bottom: 1rem; }
-
-/* Étapes */
-.steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; counter-reset: s; position: relative; }
-.step { padding: 0 1rem 0 0; display: grid; gap: .6rem; align-content: start; }
-.step-n { font: 900 3.4rem/1 var(--f-display); color: var(--hv); -webkit-text-stroke: 1.5px var(--ink); paint-order: stroke; }
-.step b { font: 800 1.25rem/1.1 var(--f-display); text-transform: uppercase; }
-.step p { color: var(--muted); font-size: .92rem; }
-.step-bar { height: 4px; background: var(--line); position: relative; margin-bottom: .4rem; }
-.step-bar::after { content: ""; position: absolute; left: 0; top: -4px; width: 12px; height: 12px; border-radius: 50%; background: var(--ink); }
-@media (max-width: 900px) { .steps { grid-template-columns: 1fr; gap: 1.6rem; } .step { grid-template-columns: 70px 1fr; column-gap: 1rem; padding: 0; } .step-bar { display: none; } .step-n { grid-row: span 2; } }
-
-/* Outils : saison + rappel */
-.outils-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
-.outils-grid > * { min-width: 0; }
-.saison { background: var(--navy); color: var(--navy-ink); border-radius: var(--radius); padding: 1.8rem; display: grid; gap: 1rem; align-content: start; position: relative; overflow: hidden; }
-.saison .eyebrow { color: rgba(242,245,249,.7); }
-.saison .eyebrow::before { background: repeating-linear-gradient(-45deg, var(--hv) 0 4px, transparent 4px 8px); }
-.compte { display: flex; align-items: baseline; gap: .6rem; }
-.compte b { font: 900 clamp(4rem, 10vw, 6.4rem)/.85 var(--f-display); color: var(--hv); font-variant-numeric: tabular-nums; }
-.compte span { font: 800 1.4rem var(--f-display); text-transform: uppercase; }
-.saison p { color: rgba(242,245,249,.8); }
-.flocon { position: absolute; right: -30px; top: -30px; width: 180px; opacity: .08; }
-.field { display: grid; gap: .35rem; }
-.field label { font: 600 .78rem var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
-.field input, .field select, .field textarea { font: 500 1rem var(--f-body); color: var(--ink); background: var(--bg); border: 2px solid var(--line); border-radius: var(--radius); padding: .7rem .8rem; width: 100%; min-width: 0; }
-.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--ink); outline: none; }
-.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
-.odo { margin-top: 1.2rem; display: grid; gap: .6rem; }
-.odo-num { display: flex; gap: 3px; }
-.odo-num i { font: 600 1.5rem var(--f-mono); font-style: normal; background: var(--ink); color: var(--bg); width: 1.4em; text-align: center; border-radius: 3px; padding: .1rem 0; font-variant-numeric: tabular-nums; }
-.odo-num i.last { background: var(--hv); color: var(--hv-ink); }
-.jauge { height: 12px; background: var(--surface-2); border-radius: 99px; overflow: hidden; }
-.jauge div { height: 100%; background: var(--ok); width: 0; transition: width .5s, background .3s; }
-.odo-msg { font-weight: 600; }
-@media (max-width: 860px) { .outils-grid { grid-template-columns: 1fr; } }
-@media (max-width: 420px) { .row2 { grid-template-columns: 1fr; } }
-
-/* FAQ */
-.faq { display: grid; gap: .6rem; max-width: 860px; }
-.faq details { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
-.faq summary { list-style: none; cursor: pointer; padding: 1.1rem 1.3rem; display: flex; justify-content: space-between; gap: 1rem; font-weight: 700; font-size: 1.05rem; }
-.faq summary::-webkit-details-marker { display: none; }
-.faq summary::after { content: "+"; font: 900 1.6rem/1 var(--f-display); transition: transform .2s; }
-.faq details[open] summary::after { transform: rotate(45deg); }
-.faq details p { padding: 0 1.3rem 1.2rem; color: var(--muted); max-width: 68ch; }
-
-/* Rendez-vous */
-.rdv { background: var(--navy); color: var(--navy-ink); }
-.rdv .eyebrow { color: rgba(242,245,249,.7); }
-.rdv .lead { color: rgba(242,245,249,.78); }
-.rdv-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 2.4rem; align-items: start; }
-.rdv-grid > * { min-width: 0; }
-.coord { display: grid; gap: 1.1rem; margin-top: 2rem; }
-.coord div { display: grid; gap: .1rem; }
-.coord small { font: 600 .72rem var(--f-mono); letter-spacing: .14em; text-transform: uppercase; opacity: .6; }
-.coord b { font: 800 1.7rem/1.1 var(--f-display); letter-spacing: .02em; user-select: all; }
-.heures { font: .85rem/1.8 var(--f-mono); }
-.heures span { display: flex; justify-content: space-between; gap: 1rem; max-width: 340px; border-bottom: 1px dashed rgba(242,245,249,.18); }
-.heures em { font-style: normal; }
-.heures b { white-space: nowrap; font-weight: 600; }
-.form { background: var(--surface); color: var(--ink); border-radius: var(--radius); padding: 1.6rem; display: grid; gap: .9rem; }
-.recap { background: var(--surface-2); border-radius: var(--radius); padding: 1rem; font: .85rem/1.6 var(--f-mono); white-space: pre-wrap; overflow-wrap: anywhere; }
-.recap-actions { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
-.toast { font: 600 .85rem var(--f-mono); color: var(--ok); }
-@media (max-width: 860px) { .rdv-grid { grid-template-columns: 1fr; } }
-
-footer { background: #0b1628; color: #c8d2e0; padding-block: 2.4rem; font-size: .9rem; }
-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; align-items: center; }
-footer b { font: 900 1.3rem var(--f-display); text-transform: uppercase; color: #f2f5f9; }
-footer .s { font-family: var(--f-mono); font-size: .78rem; color: var(--hv); letter-spacing: .08em; text-transform: uppercase; }
-
-@media (max-width: 860px) {
-  .hero-grid { grid-template-columns: 1fr; }
-  .gauge-card { max-width: 420px; margin: 0 auto; width: 100%; }
-}
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation: none !important; transition: none !important; }
-  html { scroll-behavior: auto; }
-}
-</style>
-
-<header class="top">
-  <div class="wrap">
-    <a class="logo" href="#accueil" aria-label="Accueil">
-      <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#f5c400"/><path d="M27.5 8.5a7 7 0 0 0-8.6 8.9L9.6 26.7a2.6 2.6 0 0 0 3.7 3.7l9.3-9.3a7 7 0 0 0 8.9-8.6l-4 4-3.3-.9-.9-3.3z" fill="#0f1e33"/></svg>
-      <span><b data-cfg="nom">E mécanique</b><small data-cfg="metier">Mécanicien automobile</small></span>
+<header class="entete" id="entete">
+  <div class="conteneur entete-in">
+    <a class="logo" href="#accueil" aria-label="ED-mécanique, retour en haut de la page">
+      <span class="logo-signe" aria-hidden="true">ED</span>
+      <span class="logo-texte"><b>ED<i>-</i>mécanique</b><small>Mécanique générale · Carrosserie</small></span>
     </a>
-    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav">MENU</button>
-    <nav class="nav" id="nav">
-      <a href="#services">Services</a>
-      <a href="#decodeur">Décodeur</a>
-      <a href="#realisations">Avant / après</a>
-      <a href="#etapes">Comment ça marche</a>
-      <a href="#faq">Questions</a>
-      <a class="btn btn-hv" href="#rendez-vous">Prendre rendez-vous</a>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="burger-barres" aria-hidden="true"></span><span class="burger-texte">Menu</span>
+    </button>
+    <nav class="menu" id="menu" aria-label="Menu principal">
+      <a href="#mecanique">Mécanique générale</a>
+      <a href="#carrosserie">Carrosserie</a>
+      <a href="#fonctionnement">Comment ça marche</a>
+      <a href="#questions">Questions</a>
+      <a class="btn btn-rouge menu-rdv" href="#contact">Prendre rendez-vous</a>
     </nav>
   </div>
 </header>
 
-<main id="accueil">
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <p class="eyebrow"><span data-cfg="zone">Montréal et environs</span></p>
-        <h1 class="slogan"><span>Bon prix.</span><span>Bon travail.</span><span>Bonne route.</span></h1>
-        <p class="lead">Mécanique générale et carrosserie, faites avec soin par un mécanicien qui vous explique tout. Le prix se fait sur place : je regarde votre auto et je vous le donne avant de commencer.</p>
-        <div class="hero-cta">
-          <a class="btn btn-hv" href="#rendez-vous">Prendre rendez-vous
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a class="btn btn-ghost" href="#decodeur">Mon auto fait un bruit</a>
-        </div>
-        <p class="accueil-badge"><b>Sur rendez-vous</b> ou <b>premier arrivé, premier servi</b></p>
-        <div class="hero-facts"><span>Mécanique générale</span><span>Carrosserie</span><span>Prix fait sur place</span><span>Travail garanti*</span></div>
-      </div>
-      <div class="gauge-card">
-        <svg class="gauge" id="gauge" viewBox="0 0 400 400" role="img" aria-label="Compte-tours décoratif">
-          <circle cx="200" cy="200" r="182" fill="none" stroke="rgba(242,245,249,.12)" stroke-width="2"/>
-          <path id="zone-rouge" fill="none" stroke="#d23a2a" stroke-width="14"/>
-          <g id="ticks"></g>
-          <text class="unit" x="200" y="268" text-anchor="middle" font-size="13">× 1000 tr/min</text>
-          <g id="aiguille">
-            <path d="M196 200 L200 52 L204 200 Z" fill="#f5c400"/>
-          </g>
-          <circle cx="200" cy="200" r="18" fill="#0f1e33" stroke="#f5c400" stroke-width="4"/>
-        </svg>
-        <div class="ticket" aria-hidden="true">
-          <h4>Bon de travail <em>n° 0427</em></h4>
-          <div class="l"><span>Inspection</span><b>✓</b></div>
-          <div class="l"><span>Mécanique générale</span><b>✓</b></div>
-          <div class="l"><span>Carrosserie</span><b>✓</b></div>
-          <div class="l"><span>Prix</span><b>sur place</b></div>
-          <span class="stamp">APPROUVÉ</span>
-        </div>
+<main id="contenu">
+  <section class="accueil" id="accueil" aria-labelledby="accueil-titre">
+    <img class="accueil-photo" src="assets/img/accueil-1600.webp"
+         srcset="assets/img/accueil-900.webp 900w, assets/img/accueil-1600.webp 1600w, assets/img/accueil-2400.webp 2400w"
+         sizes="100vw" width="1600" height="1200" alt="Mécanicien au travail sous un véhicule, vu d'en haut" fetchpriority="high">
+    <div class="conteneur accueil-in">
+      <p class="surtitre surtitre-clair">Garage · Montréal et environs</p>
+      <h1 id="accueil-titre">Mécanique générale <span>et carrosserie</span></h1>
+      <p class="slogan">Pas très cher et bon travail garanti</p>
+      <p class="accueil-texte">Votre auto est entre de bonnes mains : je trouve le problème, je vous explique tout et je vous donne le prix sur place, avant de commencer.</p>
+      <div class="accueil-actions">
+        <a class="btn btn-rouge" href="#contact">Prendre rendez-vous <svg class="i"><use href="#i-fleche"/></svg></a>
+        <a class="btn btn-contour" href="tel:+14387647365"><svg class="i"><use href="#i-tel"/></svg>438&nbsp;764-7365</a>
       </div>
     </div>
   </section>
 
-  <section class="promesses" aria-label="Mes engagements">
-    <div class="wrap">
-      <div class="promesse"><b>Prix fait sur place</b><span>Je regarde l'auto et je vous donne le prix avant de commencer.</span></div>
-      <div class="promesse"><b>Rien de caché</b><span>Je vous montre les pièces usées et je vous explique pourquoi.</span></div>
-      <div class="promesse"><b>Travail garanti</b><span>Pièces et main-d'œuvre, selon les conditions applicables.</span></div>
-      <div class="promesse"><b>Votre accord d'abord</b><span>Aucun extra ajouté sans votre OK.</span></div>
+  <section class="bande" aria-label="Nos services en bref">
+    <div class="conteneur bande-in">
+      <article class="bande-item">
+        <svg class="i i-grand"><use href="#i-cle"/></svg>
+        <h2>Mécanique générale</h2>
+        <p>Freins, suspension, entretien, diagnostic : les problèmes de tous les jours, réglés proprement.</p>
+        <a class="lien-fleche" href="#mecanique">Voir le détail <svg class="i"><use href="#i-fleche"/></svg></a>
+      </article>
+      <article class="bande-item">
+        <svg class="i i-grand"><use href="#i-auto"/></svg>
+        <h2>Carrosserie</h2>
+        <p>Bosses, éraflures, rouille, pièces abîmées : une auto qui a l'air aussi bien qu'elle roule.</p>
+        <a class="lien-fleche" href="#carrosserie">Voir le détail <svg class="i"><use href="#i-fleche"/></svg></a>
+      </article>
+      <article class="bande-item">
+        <svg class="i i-grand"><use href="#i-bon"/></svg>
+        <h2>Prix fait sur place</h2>
+        <p>Chaque auto est différente : je l'inspecte, je vous donne le prix et rien ne commence sans votre accord.</p>
+        <a class="lien-fleche" href="#fonctionnement">Comment ça marche <svg class="i"><use href="#i-fleche"/></svg></a>
+      </article>
     </div>
   </section>
 
-  <section id="services">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Services</p>
-        <h2>Ce que je répare</h2>
-        <p class="lead">Deux métiers, un seul interlocuteur, pour la plupart des voitures, VUS et camionnettes. Chaque auto est différente : le prix se fait sur place, une fois l'auto inspectée.</p>
-      </div>
-      <div class="services" id="liste-services"></div>
-    </div>
-  </section>
-
-  <section class="decodeur" id="decodeur">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Le décodeur</p>
-        <h2>Votre auto fait un drôle de bruit ?</h2>
-        <p class="lead">Écoutez les bruits les plus courants et choisissez celui qui ressemble au vôtre. Vous saurez tout de suite ce que c'est probablement et si c'est urgent.</p>
-      </div>
-      <div class="onglets" role="tablist" aria-label="Choisir un outil">
-        <button role="tab" id="t-bruits" aria-selected="true" aria-controls="p-bruits">Les bruits</button>
-        <button role="tab" id="t-temoins" aria-selected="false" aria-controls="p-temoins">Les témoins du tableau de bord</button>
-      </div>
-      <div class="dec-grid">
-        <div>
-          <div class="tab-panel sons" id="p-bruits" role="tabpanel" aria-labelledby="t-bruits"></div>
-          <div class="tab-panel temoins" id="p-temoins" role="tabpanel" aria-labelledby="t-temoins" hidden></div>
-        </div>
-        <div class="scope-card" id="scope-card">
-          <div class="scope-top"><span class="rec"><i></i><span id="scope-etat">Prêt à écouter</span></span><span id="scope-hz">— Hz</span></div>
-          <canvas id="scope" aria-hidden="true"></canvas>
-          <div class="verdict" aria-live="polite">
-            <span class="urgence" id="v-urgence"></span>
-            <h3 id="v-titre"></h3>
-            <p id="v-texte"></p>
-            <div class="verdict-bas">
-              <a class="btn btn-hv" href="#rendez-vous" id="v-rdv">Réserver pour ce problème</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <p class="dec-note">Ces sons sont des reproductions et ce diagnostic reste une piste : seule une inspection confirme la cause. En cas de doute sur la sécurité, ne prenez pas la route.</p>
-    </div>
-  </section>
-
-  <section id="realisations">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Avant / après</p>
-        <h2>Le travail, en images</h2>
-        <p class="lead">Glissez la poignée jaune pour comparer l'état de l'auto à l'arrivée et après mon passage.</p>
-      </div>
-      <div class="galerie">
-        <div>
-          <div class="ba" id="ba">
-            <canvas id="ba-avant" aria-hidden="true"></canvas>
-            <canvas id="ba-apres" class="apres" aria-hidden="true"></canvas>
-            <span class="ba-tag avant">Avant</span>
-            <span class="ba-tag apres">Après</span>
-            <div class="ba-ligne"></div>
-            <div class="ba-poignee"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></div>
-            <input type="range" id="ba-range" min="0" max="100" value="50" aria-label="Comparer avant et après">
-          </div>
-          <div class="ba-info" aria-live="polite">
-            <h3 id="ba-titre"></h3>
-            <div class="ba-mesure" id="ba-mesure"></div>
-            <p id="ba-texte"></p>
-          </div>
-          <p class="ba-note" id="ba-note">Illustrations d'exemple : elles seront remplacées par des photos de vrais travaux.</p>
-        </div>
-        <div class="cas" id="cas" role="group" aria-label="Choisir une réalisation"></div>
+  <section class="section" id="mecanique" aria-labelledby="mecanique-titre">
+    <div class="conteneur duo">
+      <figure class="duo-photo">
+        <img src="assets/img/mecanique-1200.webp"
+             srcset="assets/img/mecanique-700.webp 700w, assets/img/mecanique-1200.webp 1200w"
+             sizes="(max-width: 860px) 100vw, 50vw" width="1200" height="900" alt="Mains d'un mécanicien qui serre une pièce du moteur avec une clé" loading="lazy">
+      </figure>
+      <div class="duo-texte">
+        <p class="numero" aria-hidden="true">01</p>
+        <p class="surtitre">Mécanique générale</p>
+        <h2 id="mecanique-titre">Les problèmes de tous les jours, trouvés et réglés proprement</h2>
+        <p>Un bruit en freinant, un voyant qui s'allume, une vidange qui approche : je regarde votre auto, je trouve la cause et je vous l'explique simplement, pièces usées à l'appui.</p>
+        <ul class="liste-coche">
+          <li><svg class="i"><use href="#i-coche"/></svg>Freins et suspension</li>
+          <li><svg class="i"><use href="#i-coche"/></svg>Entretien et vidanges</li>
+          <li><svg class="i"><use href="#i-coche"/></svg>Diagnostic des bruits et des témoins</li>
+          <li><svg class="i"><use href="#i-coche"/></svg>Réparations courantes</li>
+        </ul>
+        <a class="btn btn-noir" href="#contact" data-service="Mécanique générale">Réserver en mécanique <svg class="i"><use href="#i-fleche"/></svg></a>
       </div>
     </div>
   </section>
 
-  <section id="etapes">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Comment ça marche</p>
-        <h2>Pas de surprise, du début à la fin</h2>
-      </div>
-      <div class="steps">
-        <div class="step"><div class="step-bar"></div><span class="step-n">1</span><div><b>Vous prenez rendez-vous</b><p>Par téléphone, texto ou avec le formulaire.</p></div></div>
-        <div class="step"><div class="step-bar"></div><span class="step-n">2</span><div><b>J'inspecte</b><p>Je regarde l'auto sur place et je vous donne le prix.</p></div></div>
-        <div class="step"><div class="step-bar"></div><span class="step-n">3</span><div><b>Vous décidez</b><p>Rien ne commence sans votre accord sur le prix.</p></div></div>
-        <div class="step"><div class="step-bar"></div><span class="step-n">4</span><div><b>Je répare</b><p>Avec des pièces de qualité, au couple de serrage prescrit.</p></div></div>
-        <div class="step"><div class="step-bar"></div><span class="step-n">5</span><div><b>Bonne route</b><p>Je vous montre ce qui a été changé et vous repartez.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="devis" id="outils">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Outils pratiques</p>
-        <h2>Restez en avance sur votre auto</h2>
-      </div>
-      <div class="outils-grid">
-        <div class="saison">
-          <svg class="flocon" viewBox="0 0 100 100" aria-hidden="true"><g stroke="#fff" stroke-width="6" stroke-linecap="round" fill="none"><path d="M50 5v90M11 27.5l78 45M11 72.5l78-45"/><path d="M38 12l12 10 12-10M38 88l12-10 12 10"/></g></svg>
-          <p class="eyebrow" id="saison-titre">Prêt pour l'hiver ?</p>
-          <div class="compte"><b id="saison-jours">–</b><span id="saison-unite">jours</span></div>
-          <p id="saison-texte">avant le 1er décembre.</p>
-          <p>Freins, batterie, suspension : je vérifie que votre auto est prête pour le froid. Et comme le sel ronge la carrosserie, on traite la rouille avant qu'elle perce.</p>
-          <div><a class="btn btn-hv" href="#rendez-vous" data-service="mecanique">Réserver une inspection</a></div>
-        </div>
-        <div class="panel">
-          <h3>Ma prochaine vidange</h3>
-          <div class="row2">
-            <div class="field"><label for="km-actuel">Kilométrage actuel</label><input id="km-actuel" type="number" inputmode="numeric" min="0" step="100" value="84650"></div>
-            <div class="field"><label for="km-vidange">À la dernière vidange</label><input id="km-vidange" type="number" inputmode="numeric" min="0" step="100" value="78900"></div>
-          </div>
-          <div class="field" style="margin-top:.8rem"><label for="intervalle">Intervalle recommandé</label>
-            <select id="intervalle"><option value="5000">5 000 km (huile ordinaire, usage sévère)</option><option value="8000" selected>8 000 km (huile synthétique)</option><option value="12000">12 000 km (selon le manuel du fabricant)</option></select></div>
-          <div class="odo">
-            <div class="odo-num" id="odo" aria-hidden="true"></div>
-            <div class="jauge"><div id="jauge"></div></div>
-            <p class="odo-msg" id="odo-msg"></p>
-          </div>
-        </div>
+  <section class="section section-grise" id="carrosserie" aria-labelledby="carrosserie-titre">
+    <div class="conteneur duo duo-inverse">
+      <figure class="duo-photo">
+        <img src="assets/img/carrosserie-1200.webp"
+             srcset="assets/img/carrosserie-700.webp 700w, assets/img/carrosserie-1200.webp 1200w"
+             sizes="(max-width: 860px) 100vw, 50vw" width="1200" height="800" alt="Ponçage de l'arrière d'une auto grise à l'atelier, avant la peinture" loading="lazy">
+        <img class="duo-encart" src="assets/img/accident-700.webp"
+             alt="Avant d'une auto accidentée, capot plié et phare cassé" loading="lazy" width="700" height="467">
+      </figure>
+      <div class="duo-texte">
+        <p class="numero" aria-hidden="true">02</p>
+        <p class="surtitre">Carrosserie</p>
+        <h2 id="carrosserie-titre">Une auto qui a l'air aussi bien qu'elle roule</h2>
+        <p>Accrochage, bosse de stationnement, rouille qui gagne avec le sel de l'hiver : je redresse, je traite et je retouche pour que la réparation ne se voie plus.</p>
+        <ul class="liste-coche">
+          <li><svg class="i"><use href="#i-coche"/></svg>Bosses et éraflures</li>
+          <li><svg class="i"><use href="#i-coche"/></svg>Rouille</li>
+          <li><svg class="i"><use href="#i-coche"/></svg>Pièces de carrosserie</li>
+          <li><svg class="i"><use href="#i-coche"/></svg>Retouches</li>
+        </ul>
+        <a class="btn btn-noir" href="#contact" data-service="Carrosserie">Réserver en carrosserie <svg class="i"><use href="#i-fleche"/></svg></a>
       </div>
     </div>
   </section>
 
-  <section id="faq">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Questions fréquentes</p>
-        <h2>Vous vous demandez</h2>
+  <section class="bandeau" aria-labelledby="bandeau-titre">
+    <img class="bandeau-photo" src="assets/img/bandeau-1600.webp"
+         srcset="assets/img/bandeau-900.webp 900w, assets/img/bandeau-1600.webp 1600w, assets/img/bandeau-2400.webp 2400w"
+         sizes="100vw" width="1600" height="1067" alt="" loading="lazy">
+    <div class="conteneur bandeau-in">
+      <h2 id="bandeau-titre">Le prix se fait sur place</h2>
+      <p>Pas de prix au hasard sur Internet. Je regarde votre auto, je vous dis ce qu'il faut faire et combien, et rien ne commence sans votre accord.</p>
+      <a class="btn btn-rouge" href="#contact">Faire inspecter mon auto <svg class="i"><use href="#i-fleche"/></svg></a>
+    </div>
+  </section>
+
+  <section class="section" id="fonctionnement" aria-labelledby="fonctionnement-titre">
+    <div class="conteneur">
+      <div class="entete-section">
+        <p class="surtitre">Comment ça marche</p>
+        <h2 id="fonctionnement-titre">Pas de surprise, du début à la fin</h2>
+      </div>
+      <ol class="etapes">
+        <li><span class="etape-n">1</span><h3>Vous venez</h3><p>Sur rendez-vous, ou sans rendez-vous : premier arrivé, premier servi.</p></li>
+        <li><span class="etape-n">2</span><h3>J'inspecte</h3><p>Je regarde l'auto sur place et je vous donne le prix.</p></li>
+        <li><span class="etape-n">3</span><h3>Vous décidez</h3><p>Rien ne commence sans votre accord sur le prix.</p></li>
+        <li><span class="etape-n">4</span><h3>Je répare</h3><p>Avec des pièces de qualité, au couple de serrage prescrit.</p></li>
+        <li><span class="etape-n">5</span><h3>Bonne route</h3><p>Je vous montre ce qui a été changé, vous payez comptant et vous repartez.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section-grise" aria-labelledby="engagements-titre">
+    <div class="conteneur">
+      <div class="entete-section">
+        <p class="surtitre">Mes engagements</p>
+        <h2 id="engagements-titre">Un garage où l'on vous explique tout</h2>
+      </div>
+      <div class="engagements">
+        <article><svg class="i i-grand"><use href="#i-bon"/></svg><h3>Prix fait sur place</h3><p>Je regarde l'auto et je vous donne le prix avant de commencer.</p></article>
+        <article><svg class="i i-grand"><use href="#i-oeil"/></svg><h3>Rien de caché</h3><p>Je vous montre les pièces usées et je vous explique pourquoi.</p></article>
+        <article><svg class="i i-grand"><use href="#i-bouclier"/></svg><h3>Travail garanti*</h3><p>Pièces et main-d'œuvre, selon les conditions applicables.</p></article>
+        <article><svg class="i i-grand"><use href="#i-accord"/></svg><h3>Votre accord d'abord</h3><p>Aucun extra ajouté sans votre OK.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="questions" aria-labelledby="questions-titre">
+    <div class="conteneur questions">
+      <div class="entete-section">
+        <p class="surtitre">Questions fréquentes</p>
+        <h2 id="questions-titre">Vous vous demandez</h2>
+        <p>Une autre question&nbsp;? Appelez ou écrivez par texto au <a href="tel:+14387647365">438&nbsp;764-7365</a>.</p>
       </div>
       <div class="faq">
-        <details open><summary>Combien ça coûte ?</summary><p>Le prix se fait sur place. Chaque auto est différente : je la regarde, je vous dis ce qu'il faut faire et combien, et rien ne commence sans votre accord. Si je découvre autre chose en cours de route, je vous en parle avant de toucher à quoi que ce soit.</p></details>
-        <details><summary>Qu'est-ce que vous faites exactement ?</summary><p>De la mécanique générale et de la carrosserie. Pour le reste, je vous le dis franchement et je vous oriente vers quelqu'un.</p></details>
-        <details><summary>Quelle garantie offrez-vous ?</summary><p>Les pièces et la main-d'œuvre sont garanties selon les conditions applicables à chaque réparation (type de pièce, usage du véhicule). Les détails sont écrits sur votre facture.</p></details>
-        <details><summary>Puis-je fournir mes propres pièces ?</summary><p>C'est possible dans certains cas, mais la garantie ne couvre alors que la main-d'œuvre. Parlons-en lors de la prise de rendez-vous.</p></details>
-        <details><summary>Est-ce que ça annule la garantie du fabricant ?</summary><p>Non. Faire faire l'entretien ailleurs qu'au concessionnaire ne l'annule pas, tant que l'entretien respecte le manuel du fabricant et que vous gardez vos factures.</p></details>
-        <details><summary>Quels modes de paiement acceptez-vous ?</summary><p>Comptant, Interac et cartes de crédit.</p></details>
+        <details open><summary>Combien ça coûte&nbsp;?</summary><p>Le prix se fait sur place. Chaque auto est différente : je la regarde, je vous dis ce qu'il faut faire et combien, et rien ne commence sans votre accord. Si je découvre autre chose en cours de route, je vous en parle avant de toucher à quoi que ce soit.</p></details>
+        <details><summary>Faut-il prendre rendez-vous&nbsp;?</summary><p>Ce n'est pas obligatoire. Vous pouvez réserver par téléphone ou par texto, ou passer pendant les heures d'ouverture : premier arrivé, premier servi.</p></details>
+        <details><summary>Qu'est-ce que vous faites exactement&nbsp;?</summary><p>De la mécanique générale et de la carrosserie. Pour le reste, je vous le dis franchement et je vous oriente vers quelqu'un.</p></details>
+        <details><summary>Quelle garantie offrez-vous&nbsp;?</summary><p>Les pièces et la main-d'œuvre sont garanties selon les conditions applicables à chaque réparation (type de pièce, usage du véhicule). Les détails sont écrits sur votre facture.</p></details>
+        <details><summary>Est-ce que ça annule la garantie du fabricant&nbsp;?</summary><p>Non. Faire faire l'entretien ailleurs qu'au concessionnaire ne l'annule pas, tant que l'entretien respecte le manuel du fabricant et que vous gardez vos factures.</p></details>
+        <details><summary>Quels modes de paiement acceptez-vous&nbsp;?</summary><p>Le paiement se fait en comptant seulement. Comme le prix est donné avant le début des travaux, vous savez combien prévoir.</p></details>
       </div>
     </div>
   </section>
 
-  <section class="rdv" id="rendez-vous">
-    <div class="wrap rdv-grid">
-      <div>
-        <p class="eyebrow">Rendez-vous</p>
-        <h2 style="margin-top:1rem">On s'occupe de votre auto</h2>
-        <p class="lead" style="margin-top:1rem">Remplissez le formulaire : il prépare votre message. Vous n'avez qu'à le copier et me l'envoyer par texto, ou appelez-moi directement.</p>
-        <div class="sans-rdv"><b>Rendez-vous ou premier arrivé, premier servi</b><span>Pas de rendez-vous ? Passez pendant les heures d'ouverture : je vous prends dès que possible.</span></div>
-        <div class="coord">
-          <div><small>Téléphone et texto</small><b data-cfg="tel">514 555-0187</b></div>
-          <div><small>Secteur</small><b data-cfg="zone">Montréal et environs</b></div>
-          <div class="heures"><small>Heures</small>
-            <span><em>Lundi au vendredi</em><b>7 h 30 – 17 h 30</b></span>
-            <span><em>Samedi</em><b>8 h – 13 h</b></span>
-            <span><em>Dimanche</em><b>Fermé</b></span>
-          </div>
-        </div>
+  <section class="contact" id="contact" aria-labelledby="contact-titre">
+    <div class="conteneur contact-in">
+      <div class="contact-infos">
+        <p class="surtitre surtitre-clair">Rendez-vous</p>
+        <h2 id="contact-titre">On s'occupe de votre auto</h2>
+        <p>Remplissez le formulaire et envoyez-le : votre demande arrive directement dans mes textos, avec votre numéro, pour que je vous réponde. Vous pouvez aussi m'appeler.</p>
+        <p class="sans-rdv"><strong>Rendez-vous ou premier arrivé, premier servi.</strong> Pas de rendez-vous&nbsp;? Passez pendant les heures d'ouverture : je vous prends dès que possible.</p>
+        <ul class="coordonnees">
+          <li><svg class="i"><use href="#i-tel"/></svg><span><small>Téléphone et texto</small><a href="tel:+14387647365">438&nbsp;764-7365</a></span></li>
+          <li><svg class="i"><use href="#i-lieu"/></svg><span><small>Secteur</small>Montréal et environs</span></li>
+          <li><svg class="i"><use href="#i-argent"/></svg><span><small>Paiement</small>Comptant seulement</span></li>
+        </ul>
+        <table class="heures">
+          <caption><svg class="i"><use href="#i-heure"/></svg>Heures d'ouverture</caption>
+          <tbody>
+            <tr><th scope="row">Disponible</th><td>8&nbsp;h – 18&nbsp;h</td></tr>
+          </tbody>
+        </table>
       </div>
-      <form class="form" id="form" novalidate>
-        <div class="row2">
-          <div class="field"><label for="f-nom">Votre nom</label><input id="f-nom" required autocomplete="name" placeholder="Prénom et nom"></div>
-          <div class="field"><label for="f-tel">Téléphone</label><input id="f-tel" required type="tel" autocomplete="tel" placeholder="514 000-0000"></div>
+
+      <form class="formulaire" id="formulaire" novalidate>
+        <h3>Demande de rendez-vous</h3>
+        <div class="champs-2">
+          <div class="champ"><label for="f-nom">Votre nom</label><input id="f-nom" name="nom" required autocomplete="name" placeholder="Prénom et nom"></div>
+          <div class="champ"><label for="f-tel">Téléphone</label><input id="f-tel" name="tel" required type="tel" autocomplete="tel" placeholder="514 000-0000"></div>
         </div>
-        <div class="field"><label for="f-auto">Véhicule</label><input id="f-auto" required placeholder="Année, marque, modèle (ex. 2017 Honda Civic)"></div>
-        <div class="row2">
-          <div class="field"><label for="f-service">Service</label><select id="f-service"></select></div>
-          <div class="field"><label for="f-date">Date souhaitée</label><input id="f-date" type="date"></div>
+        <div class="champ"><label for="f-auto">Véhicule</label><input id="f-auto" name="auto" required placeholder="Année, marque, modèle (ex. 2017 Honda Civic)"></div>
+        <div class="champs-2">
+          <div class="champ"><label for="f-service">Service</label>
+            <select id="f-service" name="service">
+              <option>Mécanique générale</option>
+              <option>Carrosserie</option>
+              <option>Je ne sais pas (inspection)</option>
+            </select></div>
+          <div class="champ"><label for="f-date">Date souhaitée</label><input id="f-date" name="date" type="date"></div>
         </div>
-        <div class="field"><label for="f-msg">Ce que vous remarquez</label><textarea id="f-msg" rows="3" placeholder="Bruit en freinant, voyant allumé, bosse, rouille…"></textarea></div>
-        <p class="toast" id="erreur" hidden></p>
-        <button class="btn btn-hv" type="submit">Préparer mon message</button>
-        <div id="recap-zone" hidden>
-          <div class="recap" id="recap"></div>
-          <div class="recap-actions" style="margin-top:.8rem">
-            <button class="btn btn-ghost" type="button" id="copier">Copier le message</button>
-            <span class="toast" id="copie-ok" hidden>Message copié</span>
+        <div class="champ"><label for="f-msg">Ce que vous remarquez</label><textarea id="f-msg" name="message" rows="4" placeholder="Bruit en freinant, voyant allumé, bosse, rouille…"></textarea></div>
+        <p class="formulaire-erreur" id="erreur" role="alert" hidden></p>
+        <button class="btn btn-rouge" type="submit"><svg class="i"><use href="#i-texto"/></svg>Envoyer ma demande par texto</button>
+        <div class="recap" id="recap" hidden>
+          <p class="recap-titre">Votre demande est prête</p>
+          <p class="recap-note">Sur téléphone, touchez « Envoyer par texto » puis Envoyer. Sur ordinateur, copiez le message et envoyez-le par texto au <strong>438&nbsp;764-7365</strong>.</p>
+          <pre id="recap-texte"></pre>
+          <div class="recap-actions">
+            <a class="btn btn-rouge" id="envoyer-texto" href="#"><svg class="i"><use href="#i-texto"/></svg>Envoyer par texto</a>
+            <button class="btn btn-contour-sombre" type="button" id="copier">Copier le message</button>
           </div>
+          <p class="recap-note" id="copie-ok" role="status"></p>
         </div>
       </form>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <div><b data-cfg="nom">E mécanique</b><div class="s">Bon prix. Bon travail. Bonne route.</div><div style="font-size:.82rem;margin-top:.3rem">Sur rendez-vous ou premier arrivé, premier servi.</div></div>
+<footer class="pied">
+  <div class="conteneur pied-in">
+    <div class="pied-marque">
+      <a class="logo logo-clair" href="#accueil"><span class="logo-signe" aria-hidden="true">ED</span><span class="logo-texte"><b>ED<i>-</i>mécanique</b><small>Mécanique générale · Carrosserie</small></span></a>
+      <p>Pas très cher et bon travail garanti</p>
+    </div>
+    <nav class="pied-liens" aria-label="Liens du pied de page">
+      <a href="#mecanique">Mécanique générale</a>
+      <a href="#carrosserie">Carrosserie</a>
+      <a href="#fonctionnement">Comment ça marche</a>
+      <a href="#questions">Questions</a>
+      <a href="#contact">Rendez-vous</a>
+    </nav>
+    <div class="pied-contact">
+      <a href="tel:+14387647365">438&nbsp;764-7365</a>
+      <p>Montréal et environs<br>De 8&nbsp;h à 18&nbsp;h<br>Paiement comptant seulement</p>
+    </div>
+  </div>
+  <div class="conteneur pied-bas">
     <p>* Garantie selon les conditions applicables à chaque réparation. Prix fait sur place, après inspection.</p>
+    <p>© <span id="annee">2026</span> ED-mécanique · Photos : Zanelle Lofty-Eaton, Christian Buehner, Zoshua Colah, Clark Van Der Beken, Tahamie Farooqui (Unsplash)</p>
   </div>
 </footer>
 
 <div class="barre-mobile" aria-label="Actions rapides">
-  <a class="btn btn-ghost" id="appeler" href="tel:5145550187">Appeler</a>
-  <a class="btn btn-hv" href="#rendez-vous">Rendez-vous</a>
+  <a class="btn btn-contour-sombre" href="tel:+14387647365"><svg class="i"><use href="#i-tel"/></svg>Appeler</a>
+  <a class="btn btn-rouge" href="#contact">Rendez-vous</a>
 </div>
 
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"AutoRepair","name":"E mécanique","slogan":"Bon prix. Bon travail. Bonne route.","telephone":"+1-514-555-0187","areaServed":"Montréal et environs","currenciesAccepted":"CAD","paymentAccepted":"Comptant, Interac, carte de crédit","openingHours":["Mo-Fr 07:30-17:30","Sa 08:00-13:00"],"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Mécanique générale"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Carrosserie"}}]}
-</script>
-
-<script>
-// ===== À personnaliser : tout le site se met à jour d'ici =====
-const CONFIG = {
-  nom: "E mécanique",
-  metier: "Mécanicien automobile",
-  tel: "514 555-0187",
-  zone: "Montréal et environs",
-};
-// Les deux services offerts. Pas de prix en ligne : le prix se fait sur place.
-const SERVICES = [
-  { id: "mecanique", nom: "Mécanique générale", icone: "cle",
-    texte: "Les problèmes de tous les jours, trouvés et réglés proprement.",
-    liste: ["Freins et suspension", "Entretien et vidanges", "Diagnostic des bruits et des témoins", "Réparations courantes"] },
-  { id: "carrosserie", nom: "Carrosserie", icone: "auto",
-    texte: "Une auto qui a l'air aussi bien qu'elle roule.",
-    liste: ["Bosses et éraflures", "Rouille", "Pièces de carrosserie", "Retouches"] },
-];
-
-const ICONES = {
-  cle: '<path d="M30 5.5a8 8 0 0 0-9.8 10.2L6.6 29.3a3 3 0 0 0 4.2 4.2l13.6-13.6A8 8 0 0 0 34.6 10l-4.6 4.6-3.8-1-1-3.8z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><circle class="hv" cx="9" cy="31" r="2.2"/>',
-  auto: '<path d="M4 27v-5l4-1 4-7a4 4 0 0 1 3.4-2h11a4 4 0 0 1 3.3 1.8L34 20l3 1.2V27a2 2 0 0 1-2 2h-2M10 29H7a2 2 0 0 1-2-2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M15 29h12" stroke="currentColor" stroke-width="2.4"/><circle cx="12.5" cy="29" r="3.5" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="29.5" cy="29" r="3.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path class="hv" d="M14 19l2.6-4.4a2 2 0 0 1 1.7-1h3.7v5.4z"/>',
-};
-
-const $ = (s) => document.querySelector(s);
-
-// Configuration
-document.querySelectorAll("[data-cfg]").forEach((el) => { const v = CONFIG[el.dataset.cfg]; if (v) el.textContent = v; });
-document.title = CONFIG.nom;
-
-// Menu mobile
-$("#burger").addEventListener("click", () => {
-  const ouvert = $("#nav").classList.toggle("open");
-  $("#burger").setAttribute("aria-expanded", ouvert);
-});
-document.querySelectorAll("#nav a").forEach((a) => a.addEventListener("click", () => { $("#nav").classList.remove("open"); $("#burger").setAttribute("aria-expanded", "false"); }));
-
-// Compte-tours
-(function () {
-  const g = $("#ticks"), cx = 200, cy = 200, deb = -120, fin = 120, max = 8;
-  const ang = (v) => (deb + (fin - deb) * (v / max)) * Math.PI / 180;
-  const pt = (a, r) => [cx + r * Math.sin(a), cy - r * Math.cos(a)];
-  let h = "";
-  for (let i = 0; i <= max * 5; i++) {
-    const v = i / 5, a = ang(v), major = i % 5 === 0;
-    const [x1, y1] = pt(a, 170), [x2, y2] = pt(a, major ? 146 : 158);
-    h += `<line class="tick${major ? " major" : ""}" x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke-width="${major ? 4 : 2}"/>`;
-    if (major) { const [tx, ty] = pt(a, 122); h += `<text x="${tx.toFixed(1)}" y="${(ty + 11).toFixed(1)}" text-anchor="middle" font-size="30">${v}</text>`; }
-  }
-  g.innerHTML = h;
-  const [ax, ay] = pt(ang(6), 176), [bx, by] = pt(ang(8), 176);
-  $("#zone-rouge").setAttribute("d", `M${ax} ${ay} A176 176 0 0 1 ${bx} ${by}`);
-  const aiguille = $("#aiguille");
-  const poser = (v) => { aiguille.style.transform = `rotate(${deb + (fin - deb) * (v / max)}deg)`; };
-  requestAnimationFrame(() => requestAnimationFrame(() => poser(6.4)));
-  setTimeout(() => poser(2.2), 1300);
-  let t = 0;
-  setInterval(() => { t++; poser(2.2 + Math.sin(t) * .12); }, 1600);
-  $("#gauge").addEventListener("mouseenter", () => poser(5.6));
-  $("#gauge").addEventListener("mouseleave", () => poser(2.2));
-})();
-
-// Services
-$("#liste-services").innerHTML = SERVICES.map((s) => `
-  <article class="service">
-    <svg viewBox="0 0 42 42" aria-hidden="true">${ICONES[s.icone]}</svg>
-    <h3>${s.nom}</h3>
-    <p>${s.texte}</p>
-    <ul>${s.liste.map((l) => `<li>${l}</li>`).join("")}</ul>
-    <span class="prix-place">Prix fait sur place, après inspection</span>
-  </article>`).join("");
-
-// ===== Décodeur : bruits et témoins =====
-const URGENCES = {
-  1: ["u1", "Peut attendre quelques semaines"],
-  2: ["u2", "À faire vérifier bientôt"],
-  3: ["u3", "Arrêtez-vous dès que possible"],
-};
-const BRUITS = [
-  { id: "grincement", nom: "Grincement aigu au freinage", court: "Aigu · en freinant", urgence: 2,
-    titre: "Plaquettes presque finies", texte: "Les témoins d'usure des plaquettes frottent sur le disque. C'est un avertissement prévu par le fabricant : les plaquettes arrivent à la fin, mais vous avez encore un peu de marge." },
-  { id: "frottement", nom: "Frottement métallique en freinant", court: "Grave · métal sur métal", urgence: 3,
-    titre: "Métal contre métal", texte: "Les plaquettes sont finies : leur support en métal frotte directement sur le disque. Le freinage est moins efficace et le disque s'abîme à chaque arrêt." },
-  { id: "claquement", nom: "Claquement en tournant", court: "Clic-clic · volant tourné", urgence: 2,
-    titre: "Joint homocinétique usé", texte: "Un claquement régulier qui accélère quand vous tournez à fond vient souvent d'un joint de transmission usé, en général parce que son soufflet en caoutchouc est déchiré." },
-  { id: "bourdonnement", nom: "Bourdonnement qui monte avec la vitesse", court: "Grondement · sur la route", urgence: 2,
-    titre: "Roulement de roue", texte: "Un grondement qui augmente avec la vitesse et change dans les courbes pointe vers un roulement de roue usé. Des pneus usés de façon inégale peuvent donner un bruit semblable." },
-  { id: "sifflement", nom: "Sifflement au démarrage", court: "Cri aigu · moteur froid", urgence: 1,
-    titre: "Courroie d'accessoires", texte: "Un cri aigu au démarrage à froid ou quand vous tournez le volant : la courroie est usée, mal tendue, ou son tendeur est fatigué. Si elle casse, vous perdez la direction assistée et la recharge de la batterie." },
-  { id: "cognement", nom: "Cognement régulier du moteur", court: "Toc-toc · suit le moteur", urgence: 3,
-    titre: "Cognement interne du moteur", texte: "Un cognement qui suit le régime du moteur peut venir d'un manque d'huile ou d'une pièce interne usée. Vérifiez le niveau d'huile ; continuer à rouler peut détruire le moteur." },
-];
-const TEMOINS = [
-  { id: "moteur", nom: "Moteur", couleur: "orange", urgence: 2,
-    titre: "Témoin moteur allumé (fixe)", texte: "Le calculateur a enregistré un défaut : ça va d'un bouchon d'essence mal serré à un capteur défectueux. L'auto roule normalement ? Faites lire le code bientôt.",
-    svg: '<path d="M10 14h8v-4h12v4h6l4 4h4v-3h4v14h-4v-3h-4l-4 6H16l-4-5H8v-5H5v7H2V14h3v4h3z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>' },
-  { id: "moteur-clignote", nom: "Moteur qui clignote", couleur: "rouge", urgence: 3,
-    titre: "Témoin moteur qui clignote", texte: "Le moteur a des ratés importants : de l'essence non brûlée peut abîmer le convertisseur catalytique. Ralentissez, évitez d'accélérer fort et faites vérifier l'auto sans attendre.",
-    svg: '<path d="M10 14h8v-4h12v4h6l4 4h4v-3h4v14h-4v-3h-4l-4 6H16l-4-5H8v-5H5v7H2V14h3v4h3z" fill="currentColor" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>' },
-  { id: "huile", nom: "Pression d'huile", couleur: "rouge", urgence: 3,
-    titre: "Pression d'huile basse", texte: "Le moteur ne reçoit plus assez d'huile. Arrêtez-vous dès que c'est sécuritaire, coupez le moteur et vérifiez le niveau. Ne repartez pas si le témoin reste allumé.",
-    svg: '<path d="M6 20h10l4-4h10l12-4 4 3-10 8v7H16l-4-6H6z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><path d="M49 24c0 3 4 3 4 0 0-2-2-4-2-4s-2 2-2 4z" fill="currentColor"/>' },
-  { id: "batterie", nom: "Batterie", couleur: "rouge", urgence: 3,
-    titre: "Système de charge", texte: "La batterie ne se recharge plus, souvent à cause de l'alternateur ou de la courroie. L'auto roule sur la réserve de la batterie : allez directement au garage et évitez de couper le moteur.",
-    svg: '<rect x="8" y="12" width="38" height="24" rx="2" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M14 8h8M32 8h8M15 24h7M34 24h7M37.5 20.5v7" stroke="currentColor" stroke-width="2.6"/>' },
-  { id: "temperature", nom: "Température", couleur: "rouge", urgence: 3,
-    titre: "Moteur qui surchauffe", texte: "Arrêtez-vous et laissez refroidir le moteur. N'ouvrez jamais le bouchon du radiateur à chaud : le liquide sous pression peut vous brûler. Rouler en surchauffe peut briser le moteur.",
-    svg: '<path d="M27 6v18" stroke="currentColor" stroke-width="3"/><circle cx="27" cy="27" r="5" fill="currentColor"/><path d="M27 12h6M27 18h6" stroke="currentColor" stroke-width="2.4"/><path d="M8 36c3-2 5 2 8 0s5 2 8 0 5 2 8 0 5 2 8 0 5 2 8 0" fill="none" stroke="currentColor" stroke-width="2.4"/>' },
-  { id: "freins", nom: "Freins", couleur: "rouge", urgence: 3,
-    titre: "Système de freinage", texte: "Le frein de stationnement est peut-être encore serré. Sinon, le niveau de liquide de frein est bas, souvent signe de plaquettes usées ou d'une fuite. Si le témoin reste allumé, ne roulez pas.",
-    svg: '<circle cx="27" cy="21" r="12" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M27 14v9" stroke="currentColor" stroke-width="3"/><circle cx="27" cy="27.5" r="1.8" fill="currentColor"/><path d="M11 9a17 17 0 0 0 0 24M43 9a17 17 0 0 1 0 24" fill="none" stroke="currentColor" stroke-width="2.6"/>' },
-  { id: "abs", nom: "ABS", couleur: "orange", urgence: 2,
-    titre: "Antiblocage (ABS)", texte: "Vos freins fonctionnent, mais sans l'antiblocage : les roues peuvent bloquer lors d'un freinage d'urgence, surtout sur la neige. Faites vérifier le capteur bientôt.",
-    svg: '<circle cx="27" cy="21" r="12" fill="none" stroke="currentColor" stroke-width="2.6"/><text x="27" y="25.5" text-anchor="middle" font-size="11" font-weight="800" font-family="Archivo, sans-serif" fill="currentColor">ABS</text><path d="M11 9a17 17 0 0 0 0 24M43 9a17 17 0 0 1 0 24" fill="none" stroke="currentColor" stroke-width="2.6"/>' },
-  { id: "pneus", nom: "Pression des pneus", couleur: "orange", urgence: 1,
-    titre: "Pression des pneus basse", texte: "Un pneu manque d'air. Au Québec, c'est courant aux premiers froids : la pression baisse avec la température. Gonflez à la pression indiquée dans le cadre de la portière ; si ça revient, c'est peut-être une crevaison lente.",
-    svg: '<path d="M14 10c-5 6-5 18 0 24h26c5-6 5-18 0-24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M27 14v11" stroke="currentColor" stroke-width="3"/><circle cx="27" cy="30" r="1.8" fill="currentColor"/><path d="M12 38h30" stroke="currentColor" stroke-width="2.6" stroke-dasharray="3 3"/>' },
-];
-
-let choixDec = null;
-function verdict(item) {
-  choixDec = item;
-  const [cls, lib] = URGENCES[item.urgence];
-  const u = $("#v-urgence"); u.className = "urgence " + cls; u.textContent = lib;
-  $("#v-titre").textContent = item.titre; $("#v-texte").textContent = item.texte;
-}
-$("#v-rdv").addEventListener("click", () => {
-  if (!choixDec) return;
-  $("#f-service").value = "mecanique";
-  $("#f-msg").value = (choixDec.nom ? `Problème repéré avec le décodeur : ${choixDec.nom.toLowerCase()}.` : "");
-});
-
-// Sons recréés en direct (Web Audio), aucun fichier audio
-let ac = null, sortie = null, analyse = null, finSon = 0, sourcesActives = [];
-function audio() {
-  if (!ac) {
-    const AC = window.AudioContext || window.webkitAudioContext; if (!AC) return null;
-    ac = new AC(); analyse = ac.createAnalyser(); analyse.fftSize = 2048;
-    sortie = ac.createGain(); sortie.gain.value = 0.9; sortie.connect(analyse); analyse.connect(ac.destination);
-  }
-  if (ac.state === "suspended") ac.resume();
-  return ac;
-}
-function bruitBlanc(sec) { const b = ac.createBuffer(1, ac.sampleRate * sec, ac.sampleRate), d = b.getChannelData(0); for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1; return b; }
-function src(node) { sourcesActives.push(node); return node; }
-function env(g, t, a, h, r, v) { g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(v, t + a); g.gain.setValueAtTime(v, t + a + h); g.gain.exponentialRampToValueAtTime(0.0001, t + a + h + r); }
-function sursaut(t, freq, q, dur, vol, type = "bandpass") {
-  const n = src(ac.createBufferSource()); n.buffer = bruitBlanc(dur + .05);
-  const f = ac.createBiquadFilter(); f.type = type; f.frequency.value = freq; f.Q.value = q;
-  const g = ac.createGain(); g.gain.setValueAtTime(vol, t); g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
-  n.connect(f).connect(g).connect(sortie); n.start(t); n.stop(t + dur + .05);
-}
-const SONS = {
-  grincement(t) {
-    for (let k = 0; k < 3; k++) {
-      const d = t + k * 1.1, o = src(ac.createOscillator()), o2 = src(ac.createOscillator()), lfo = src(ac.createOscillator()), lg = ac.createGain(), g = ac.createGain();
-      o.frequency.value = 3150; o2.frequency.value = 6290; o2.type = "triangle"; lfo.frequency.value = 7; lg.gain.value = 55;
-      lfo.connect(lg); lg.connect(o.frequency); lg.connect(o2.frequency);
-      const g2 = ac.createGain(); g2.gain.value = .25; o2.connect(g2).connect(g); o.connect(g); g.connect(sortie);
-      env(g, d, .08, .55, .25, .16);
-      [o, o2, lfo].forEach((x) => { x.start(d); x.stop(d + 1); });
-    }
-    return 3.4;
-  },
-  frottement(t) {
-    const n = src(ac.createBufferSource()); n.buffer = bruitBlanc(3.4);
-    const f = ac.createBiquadFilter(); f.type = "bandpass"; f.frequency.value = 520; f.Q.value = 1.3;
-    const am = ac.createGain(), lfo = src(ac.createOscillator()), lg = ac.createGain(), g = ac.createGain();
-    lfo.frequency.setValueAtTime(26, t); lfo.frequency.linearRampToValueAtTime(9, t + 3.2); lg.gain.value = .5; am.gain.value = .6;
-    lfo.connect(lg).connect(am.gain);
-    const ronfle = src(ac.createOscillator()); ronfle.type = "sawtooth"; ronfle.frequency.value = 95; const rg = ac.createGain(); rg.gain.value = .08;
-    ronfle.connect(rg).connect(f);
-    n.connect(f).connect(am).connect(g).connect(sortie); env(g, t, .2, 2.6, .5, 1.1);
-    [n, lfo, ronfle].forEach((x) => { x.start(t); x.stop(t + 3.4); });
-    return 3.4;
-  },
-  claquement(t) {
-    let d = t, p = .3;
-    while (d < t + 3.2) { sursaut(d, 2300, 3, .04, .9); sursaut(d + .012, 900, 4, .05, .4); d += p; p = Math.max(.11, p * .93); }
-    return 3.4;
-  },
-  bourdonnement(t) {
-    const o = src(ac.createOscillator()), o2 = src(ac.createOscillator()), f = ac.createBiquadFilter(), g = ac.createGain(), lfo = src(ac.createOscillator()), lg = ac.createGain();
-    o.type = "sawtooth"; o2.type = "sawtooth";
-    o.frequency.setValueAtTime(70, t); o.frequency.linearRampToValueAtTime(150, t + 3.4);
-    o2.frequency.setValueAtTime(71.5, t); o2.frequency.linearRampToValueAtTime(153, t + 3.4);
-    f.type = "lowpass"; f.frequency.value = 380; lfo.frequency.setValueAtTime(3, t); lfo.frequency.linearRampToValueAtTime(7, t + 3.4); lg.gain.value = .25;
-    const am = ac.createGain(); am.gain.value = .75; lfo.connect(lg).connect(am.gain);
-    o.connect(f); o2.connect(f); f.connect(am).connect(g).connect(sortie); env(g, t, .6, 2.4, .5, .5);
-    [o, o2, lfo].forEach((x) => { x.start(t); x.stop(t + 3.6); });
-    return 3.6;
-  },
-  sifflement(t) {
-    for (let k = 0; k < 2; k++) {
-      const d = t + k * 1.5, o = src(ac.createOscillator()), f = ac.createBiquadFilter(), g = ac.createGain();
-      o.type = "sawtooth"; o.frequency.setValueAtTime(2250, d); o.frequency.exponentialRampToValueAtTime(1650, d + 1);
-      f.type = "bandpass"; f.frequency.value = 2000; f.Q.value = 6;
-      o.connect(f).connect(g).connect(sortie); env(g, d, .05, .7, .35, .5);
-      o.start(d); o.stop(d + 1.2);
-    }
-    return 3.2;
-  },
-  cognement(t) {
-    const ralenti = src(ac.createOscillator()), rg = ac.createGain(), rf = ac.createBiquadFilter();
-    ralenti.type = "sawtooth"; ralenti.frequency.value = 38; rf.type = "lowpass"; rf.frequency.value = 160; rg.gain.value = .22;
-    ralenti.connect(rf).connect(rg).connect(sortie); ralenti.start(t); ralenti.stop(t + 3.3);
-    for (let d = t + .1; d < t + 3.2; d += .155) {
-      sursaut(d, 1100, 6, .07, .9);
-      const o = src(ac.createOscillator()), g = ac.createGain(); o.frequency.setValueAtTime(110, d); o.frequency.exponentialRampToValueAtTime(55, d + .08);
-      g.gain.setValueAtTime(.55, d); g.gain.exponentialRampToValueAtTime(0.0001, d + .1); o.connect(g).connect(sortie); o.start(d); o.stop(d + .12);
-    }
-    return 3.4;
-  },
-};
-function arreterSons() { sourcesActives.forEach((s) => { try { s.stop(); } catch (e) {} }); sourcesActives = []; finSon = 0; }
-function jouer(id) {
-  if (!audio()) return;
-  arreterSons();
-  const t = ac.currentTime + .05;
-  finSon = t + SONS[id](t);
-  $("#scope-card").classList.add("actif"); $("#scope-etat").textContent = "Lecture du son";
-}
-
-// Oscilloscope
-const scope = $("#scope");
-let tampon = null, spectre = null;
-function oscillo() {
-  const r = scope.getBoundingClientRect(), dpr = Math.min(2, window.devicePixelRatio || 1);
-  if (scope.width !== Math.round(r.width * dpr)) { scope.width = Math.round(r.width * dpr); scope.height = Math.round(r.height * dpr); }
-  const c = scope.getContext("2d"), W = scope.width, H = scope.height;
-  c.fillStyle = "#07101d"; c.fillRect(0, 0, W, H);
-  c.strokeStyle = "rgba(242,245,249,.07)"; c.lineWidth = 1;
-  for (let x = 0; x <= 10; x++) { c.beginPath(); c.moveTo(x * W / 10, 0); c.lineTo(x * W / 10, H); c.stroke(); }
-  for (let y = 0; y <= 4; y++) { c.beginPath(); c.moveTo(0, y * H / 4); c.lineTo(W, y * H / 4); c.stroke(); }
-  const actif = ac && ac.currentTime < finSon;
-  c.strokeStyle = "#f5c400"; c.lineWidth = 2 * dpr; c.shadowColor = "#f5c400"; c.shadowBlur = actif ? 10 : 0;
-  c.beginPath();
-  if (actif) {
-    if (!tampon) { tampon = new Float32Array(analyse.fftSize); spectre = new Uint8Array(analyse.frequencyBinCount); }
-    analyse.getFloatTimeDomainData(tampon);
-    for (let i = 0; i < tampon.length; i++) { const x = i / tampon.length * W, y = H / 2 - tampon[i] * H * .42; i ? c.lineTo(x, y) : c.moveTo(x, y); }
-    analyse.getByteFrequencyData(spectre);
-    let m = 0, k = 0; for (let i = 2; i < spectre.length; i++) if (spectre[i] > m) { m = spectre[i]; k = i; }
-    $("#scope-hz").textContent = m > 40 ? Math.round(k * ac.sampleRate / analyse.fftSize).toLocaleString("fr-CA") + " Hz" : "— Hz";
-  } else {
-    const t = performance.now() / 400;
-    for (let x = 0; x <= W; x += 4) { const y = H / 2 + Math.sin(x / 30 + t) * 1.5 * dpr; x ? c.lineTo(x, y) : c.moveTo(x, y); }
-    if (ac && finSon === 0 || (ac && ac.currentTime >= finSon && $("#scope-card").classList.contains("actif"))) {
-      $("#scope-card").classList.remove("actif"); $("#scope-etat").textContent = "Prêt à écouter"; $("#scope-hz").textContent = "— Hz";
-      document.querySelectorAll(".son.joue").forEach((b) => b.classList.remove("joue"));
-    }
-  }
-  c.stroke(); c.shadowBlur = 0;
-  requestAnimationFrame(oscillo);
-}
-requestAnimationFrame(oscillo);
-
-const ICONE_PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4l13 8-13 8z" fill="currentColor"/></svg>';
-$("#p-bruits").innerHTML = BRUITS.map((b) => `<button type="button" class="son" data-id="${b.id}" aria-pressed="false"><span class="play">${ICONE_PLAY}</span><span><b>${b.nom}</b><small>${b.court}</small></span></button>`).join("");
-$("#p-temoins").innerHTML = TEMOINS.map((t) => `<button type="button" class="temoin ${t.couleur}" data-id="${t.id}" aria-pressed="false"><svg viewBox="0 0 54 42" aria-hidden="true">${t.svg}</svg><span>${t.nom}</span></button>`).join("");
-document.querySelectorAll(".son").forEach((b) => b.addEventListener("click", () => {
-  const item = BRUITS.find((x) => x.id === b.dataset.id);
-  document.querySelectorAll(".son").forEach((x) => { x.setAttribute("aria-pressed", x === b); x.classList.toggle("joue", x === b); });
-  verdict(item); jouer(item.id);
-}));
-document.querySelectorAll(".temoin").forEach((b) => b.addEventListener("click", () => {
-  document.querySelectorAll(".temoin").forEach((x) => x.setAttribute("aria-pressed", x === b));
-  const item = TEMOINS.find((x) => x.id === b.dataset.id);
-  verdict({ ...item, nom: "Témoin « " + item.nom.toLowerCase() + " » allumé" });
-}));
-document.querySelectorAll("[role=tab]").forEach((tab) => tab.addEventListener("click", () => {
-  document.querySelectorAll("[role=tab]").forEach((x) => { const on = x === tab; x.setAttribute("aria-selected", on); $("#" + x.getAttribute("aria-controls")).hidden = !on; });
-  arreterSons();
-  const premier = tab.id === "t-temoins" ? TEMOINS[0] : BRUITS[0];
-  const bouton = document.querySelector(`[data-id="${premier.id}"]`);
-  document.querySelectorAll(tab.id === "t-temoins" ? ".temoin" : ".son").forEach((x) => x.setAttribute("aria-pressed", x === bouton));
-  verdict(tab.id === "t-temoins" ? { ...premier, nom: "Témoin « " + premier.nom.toLowerCase() + " » allumé" } : premier);
-}));
-document.querySelector('.son[data-id="grincement"]').setAttribute("aria-pressed", "true");
-verdict(BRUITS[0]);
-$("#appeler").href = "tel:" + CONFIG.tel.replace(/\D/g, "");
-
-// ===== Avant / après =====
-// Pour mettre de vraies photos : ajouter avant: "photos/freins-avant.jpg", apres: "photos/freins-apres.jpg".
-const GALERIE = [
-  { id: "freins", titre: "Disques et plaquettes", court: "Freins avant", dessin: "disque",
-    texte: "Disques rouillés et creusés, plaquettes presque finies : ça grinçait à chaque arrêt. Disques et plaquettes neufs, étriers nettoyés et lubrifiés, essai routier.",
-    mesures: [["Plaquette", "2 mm", "mauvais"], ["Neuve", "10 mm", "bon"]] },
-  { id: "huile", titre: "Vidange d'huile", court: "Entretien", dessin: "huile",
-    texte: "Huile noire et épaisse, bien après l'intervalle prévu. Vidange à l'huile synthétique 5W-30, filtre neuf et niveaux complétés.",
-    mesures: [["Retard", "4 200 km", "mauvais"], ["Prochaine", "+8 000 km", "bon"]] },
-  { id: "carrosserie", titre: "Portière bosselée", court: "Carrosserie", dessin: "carrosserie",
-    texte: "Bosse dans la portière, éraflures et rouille au bas de la caisse à cause du sel. Bosse redressée, rouille traitée et peinture retouchée.",
-    mesures: [["Rouille", "à traiter", "mauvais"], ["Fini", "uni", "bon"]] },
-  { id: "filtre", titre: "Filtre à air", court: "Entretien", dessin: "filtre",
-    texte: "Filtre bouché par la poussière et des débris : le moteur respire mal et consomme plus. Remplacé en quelques minutes.",
-    mesures: [["Débit d'air", "réduit", "mauvais"], ["Débit d'air", "normal", "bon"]] },
-];
-
-function hasard(graine) { let a = graine; return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
-function rr(c, x, y, w, h, r) { c.beginPath(); c.roundRect ? c.roundRect(x, y, w, h, r) : c.rect(x, y, w, h); }
-function fond(c, a, b) { const g = c.createLinearGradient(0, 0, 0, 500); g.addColorStop(0, a); g.addColorStop(1, b); c.fillStyle = g; c.fillRect(-400, -300, 1600, 1100); }
-
-const DESSINS = {
-  disque(c, apres) {
-    const R = hasard(7), cx = 380, cy = 250, r = 210;
-    fond(c, apres ? "#22324d" : "#2e2723", apres ? "#0d1828" : "#15110e");
-    c.save(); c.shadowColor = "rgba(0,0,0,.55)"; c.shadowBlur = 40; c.shadowOffsetY = 16;
-    c.beginPath(); c.arc(cx, cy, r, 0, 7); c.fillStyle = "#555"; c.fill(); c.restore();
-    if (apres && c.createConicGradient) {
-      const g = c.createConicGradient(0.4, cx, cy);
-      ["#8d97a3", "#eef2f6", "#97a1ac", "#f7f9fb", "#8a939e", "#dde2e8", "#8d97a3"].forEach((col, i, t) => g.addColorStop(i / (t.length - 1), col));
-      c.fillStyle = g;
-    } else {
-      const g = c.createRadialGradient(cx, cy, 40, cx, cy, r);
-      g.addColorStop(0, apres ? "#cfd5dc" : "#8a4f27"); g.addColorStop(1, apres ? "#8d97a3" : "#5d3016"); c.fillStyle = g;
-    }
-    c.beginPath(); c.arc(cx, cy, r, 0, 7); c.fill();
-    if (!apres) {
-      for (let i = 0; i < 420; i++) {
-        const a = R() * 6.283, d = r * (0.44 + R() * 0.55), s = 2 + R() * 13;
-        c.fillStyle = ["rgba(150,70,25,.55)", "rgba(90,40,15,.5)", "rgba(190,105,45,.45)", "rgba(60,30,15,.5)"][i % 4];
-        c.beginPath(); c.arc(cx + Math.cos(a) * d, cy + Math.sin(a) * d, s, 0, 7); c.fill();
-      }
-    }
-    for (let i = 0; i < (apres ? 46 : 16); i++) {
-      const d = r * (0.46 + (i / (apres ? 46 : 16)) * 0.52);
-      c.strokeStyle = apres ? "rgba(255,255,255,.07)" : `rgba(35,18,8,${0.25 + R() * 0.4})`;
-      c.lineWidth = apres ? 1 : 1.5 + R() * 3.5;
-      c.beginPath(); c.arc(cx, cy, d, 0, 7); c.stroke();
-    }
-    if (!apres) { c.strokeStyle = "rgba(40,20,10,.85)"; c.lineWidth = 10; c.beginPath(); c.arc(cx, cy, r - 5, 0, 7); c.stroke(); }
-    const h = c.createRadialGradient(cx - 30, cy - 30, 10, cx, cy, r * 0.42);
-    h.addColorStop(0, apres ? "#eef1f4" : "#6b5547"); h.addColorStop(1, apres ? "#9aa3ad" : "#3d2d24");
-    c.fillStyle = h; c.beginPath(); c.arc(cx, cy, r * 0.42, 0, 7); c.fill();
-    c.fillStyle = "#0b0f16"; c.beginPath(); c.arc(cx, cy, r * 0.17, 0, 7); c.fill();
-    for (let i = 0; i < 5; i++) { const a = i / 5 * 6.283 - 1.57; c.beginPath(); c.arc(cx + Math.cos(a) * r * 0.3, cy + Math.sin(a) * r * 0.3, 12, 0, 7); c.fill(); }
-    c.save(); c.translate(cx + r * 0.82, cy - r * 0.2); c.rotate(0.32);
-    c.shadowColor = "rgba(0,0,0,.5)"; c.shadowBlur = 24;
-    rr(c, -58, -118, 116, 236, 30); c.fillStyle = apres ? "#c8281e" : "#4d4540"; c.fill();
-    c.shadowBlur = 0; c.fillStyle = apres ? "rgba(255,255,255,.22)" : "rgba(255,255,255,.06)"; rr(c, -40, -96, 26, 192, 13); c.fill();
-    if (!apres) { for (let i = 0; i < 60; i++) { c.fillStyle = "rgba(20,14,10,.5)"; c.beginPath(); c.arc(-55 + R() * 110, -115 + R() * 230, 1 + R() * 4, 0, 7); c.fill(); } }
-    c.restore();
-  },
-  huile(c, apres) {
-    const R = hasard(3);
-    fond(c, "#e4e9ef", "#aab5c3");
-    c.fillStyle = "rgba(15,30,51,.12)"; c.fillRect(-400, 430, 1600, 200);
-    // bécher
-    const bx = 90, by = 110, bw = 210, bh = 320;
-    const g = c.createLinearGradient(0, 190, 0, by + bh);
-    g.addColorStop(0, apres ? "rgba(232,168,40,.9)" : "rgba(28,22,16,.97)"); g.addColorStop(1, apres ? "rgba(168,96,8,.95)" : "#050403");
-    c.fillStyle = g; rr(c, bx, 190, bw, bh - 80, [0, 0, 22, 22]); c.fill();
-    c.strokeStyle = "rgba(255,255,255,.9)"; c.lineWidth = 5; rr(c, bx, by, bw, bh, [4, 4, 24, 24]); c.stroke();
-    c.fillStyle = "rgba(255,255,255,.35)"; c.fillRect(bx + 18, by + 20, 14, bh - 50);
-    c.fillStyle = "rgba(15,30,51,.55)"; for (let i = 0; i < 6; i++) c.fillRect(bx + bw - 40, by + 50 + i * 42, 24, 3);
-    if (!apres) { c.fillStyle = "rgba(255,255,255,.12)"; for (let i = 0; i < 14; i++) { c.beginPath(); c.arc(bx + 40 + R() * 150, 220 + R() * 180, 2 + R() * 4, 0, 7); c.fill(); } }
-    // jauge d'huile
-    const y = 262, x0 = 350, x1 = 730;
-    const m = c.createLinearGradient(0, y - 12, 0, y + 12); m.addColorStop(0, "#f2f4f7"); m.addColorStop(.5, "#9aa3ad"); m.addColorStop(1, "#d4d9df");
-    c.fillStyle = m; rr(c, x0, y - 12, x1 - x0, 24, 12); c.fill();
-    c.strokeStyle = "#f5c400"; c.lineWidth = 16; c.beginPath(); c.arc(x1 + 32, y, 34, 0, 7); c.stroke();
-    const o = c.createLinearGradient(0, y - 14, 0, y + 14);
-    o.addColorStop(0, apres ? "rgba(240,180,50,.75)" : "rgba(10,8,6,.95)"); o.addColorStop(.45, apres ? "rgba(255,220,120,.85)" : "rgba(70,60,50,.95)"); o.addColorStop(1, apres ? "rgba(190,115,15,.8)" : "rgba(5,4,3,.98)");
-    c.fillStyle = o; rr(c, x0 - 2, y - 14, 210, 28, 14); c.fill();
-    c.strokeStyle = "rgba(15,30,51,.75)"; c.lineWidth = 2;
-    for (let x = 420; x <= 500; x += 10) { c.beginPath(); c.moveTo(x, y - 12); c.lineTo(x + 8, y + 12); c.stroke(); }
-    c.fillStyle = "#0f1e33"; c.font = "600 18px 'JetBrains Mono', monospace"; c.textAlign = "center";
-    c.fillText("MIN", 420, y - 26); c.fillText("MAX", 500, y - 26);
-    if (!apres) { c.fillStyle = "#0a0806"; c.beginPath(); c.moveTo(372, y + 14); c.quadraticCurveTo(360, y + 52, 372, y + 60); c.quadraticCurveTo(384, y + 52, 372, y + 14); c.fill(); }
-    c.fillStyle = apres ? "#b96f0a" : "#0f1e33"; c.font = "800 30px 'Big Shoulders Display', sans-serif"; c.textAlign = "left";
-    c.fillText(apres ? "5W-30 · NEUVE" : "USÉE · NOIRE", 350, 380);
-  },
-  carrosserie(c, apres) {
-    const R = hasard(9), forme = () => rr(c, 60, 60, 680, 380, [70, 30, 24, 24]);
-    fond(c, "#cfd6df", "#8d99a8");
-    c.fillStyle = "rgba(15,30,51,.15)"; c.fillRect(-400, 440, 1600, 200);
-    // panneau de portière
-    c.save(); c.shadowColor = "rgba(15,30,51,.45)"; c.shadowBlur = 36; c.shadowOffsetY = 16;
-    const p = c.createLinearGradient(0, 60, 0, 440);
-    p.addColorStop(0, "#2f72bd"); p.addColorStop(.45, "#1b4f8e"); p.addColorStop(.55, "#123b6c"); p.addColorStop(1, "#0b284c");
-    forme(); c.fillStyle = p; c.fill(); c.restore();
-    c.save(); forme(); c.clip();
-    // ligne de caisse et poignée
-    c.strokeStyle = "rgba(255,255,255,.2)"; c.lineWidth = 3; c.beginPath(); c.moveTo(60, 230); c.lineTo(740, 214); c.stroke();
-    c.strokeStyle = "rgba(0,0,0,.28)"; c.beginPath(); c.moveTo(60, 234); c.lineTo(740, 218); c.stroke();
-    rr(c, 540, 160, 124, 28, 14); c.fillStyle = "#0a1f3a"; c.fill();
-    rr(c, 548, 165, 108, 8, 4); c.fillStyle = "rgba(255,255,255,.28)"; c.fill();
-    // reflets
-    c.fillStyle = apres ? "rgba(255,255,255,.2)" : "rgba(255,255,255,.07)";
-    c.beginPath(); c.moveTo(130, 60); c.lineTo(270, 60); c.lineTo(150, 440); c.lineTo(10, 440); c.fill();
-    c.beginPath(); c.moveTo(310, 60); c.lineTo(350, 60); c.lineTo(230, 440); c.lineTo(190, 440); c.fill();
-    if (!apres) {
-      // bosse
-      const d = c.createRadialGradient(330, 312, 8, 345, 305, 130);
-      d.addColorStop(0, "rgba(0,0,0,.6)"); d.addColorStop(.6, "rgba(0,0,0,.25)"); d.addColorStop(1, "rgba(0,0,0,0)");
-      c.fillStyle = d; c.beginPath(); c.ellipse(345, 305, 135, 82, -.15, 0, 7); c.fill();
-      c.strokeStyle = "rgba(255,255,255,.4)"; c.lineWidth = 4; c.beginPath(); c.ellipse(350, 300, 96, 56, -.15, 3.6, 5.6); c.stroke();
-      // éraflures
-      c.strokeStyle = "rgba(225,232,240,.75)"; c.lineCap = "round";
-      for (let i = 0; i < 9; i++) { const x = 110 + R() * 130, y = 130 + R() * 60; c.lineWidth = 1 + R() * 2.5; c.beginPath(); c.moveTo(x, y); c.lineTo(x + 170 + R() * 170, y + 10 + R() * 30); c.stroke(); }
-      // rouille au bas de caisse
-      for (let i = 0; i < 220; i++) {
-        const x = 60 + R() * 680, y = 438 - Math.pow(R(), 2) * (x < 260 ? 90 : 45);
-        c.fillStyle = ["rgba(150,70,25,.85)", "rgba(110,48,18,.8)", "rgba(190,105,45,.7)"][i % 3];
-        c.beginPath(); c.arc(x, y, 2 + R() * 9, 0, 7); c.fill();
-      }
-    } else {
-      c.fillStyle = "rgba(255,255,255,.5)"; c.fillRect(60, 62, 680, 3);
-    }
-    c.restore();
-  },
-  filtre(c, apres) {
-    const R = hasard(5);
-    fond(c, "#dde3ea", "#a9b4c2");
-    c.save(); c.shadowColor = "rgba(15,30,51,.45)"; c.shadowBlur = 30; c.shadowOffsetY = 14;
-    rr(c, 100, 80, 600, 340, 18); c.fillStyle = apres ? "#ff8c1a" : "#7a5a3a"; c.fill(); c.restore();
-    const n = 20, x0 = 130, x1 = 670, y0 = 108, y1 = 392, w = (x1 - x0) / n;
-    for (let i = 0; i < n; i++) {
-      const x = x0 + i * w;
-      c.fillStyle = apres ? "#f6f2e7" : "#8b7a5f"; c.fillRect(x, y0, w / 2, y1 - y0);
-      c.fillStyle = apres ? "#d8d0bc" : "#5f513e"; c.fillRect(x + w / 2, y0, w / 2, y1 - y0);
-    }
-    if (!apres) {
-      const d = c.createLinearGradient(0, y0, 0, y1); d.addColorStop(0, "rgba(40,30,20,.55)"); d.addColorStop(1, "rgba(40,30,20,.1)");
-      c.fillStyle = d; c.fillRect(x0, y0, x1 - x0, y1 - y0);
-      for (let i = 0; i < 700; i++) { c.fillStyle = `rgba(${30 + R() * 40},${22 + R() * 30},${12 + R() * 20},${0.3 + R() * 0.5})`; c.beginPath(); c.arc(x0 + R() * (x1 - x0), y0 + R() * (y1 - y0) * (R() < .7 ? .6 : 1), .8 + R() * 3, 0, 7); c.fill(); }
-      c.save(); c.translate(470, 190); c.rotate(-0.5); c.fillStyle = "#6f5a2a";
-      c.beginPath(); c.moveTo(-50, 0); c.quadraticCurveTo(0, -36, 50, 0); c.quadraticCurveTo(0, 36, -50, 0); c.fill();
-      c.strokeStyle = "#4a3b1a"; c.lineWidth = 2; c.beginPath(); c.moveTo(-56, 0); c.lineTo(46, 0); c.stroke(); c.restore();
-    } else {
-      c.fillStyle = "rgba(255,255,255,.35)"; c.fillRect(x0, y0, x1 - x0, 16);
-    }
-  },
-};
-
-const baEl = $("#ba"), baRange = $("#ba-range");
-let casActif = GALERIE[0];
-function cadre(canvas) {
-  const r = canvas.getBoundingClientRect(), dpr = Math.min(2, window.devicePixelRatio || 1);
-  canvas.width = Math.max(1, Math.round(r.width * dpr)); canvas.height = Math.max(1, Math.round(r.height * dpr));
-  const c = canvas.getContext("2d"), s = Math.max(canvas.width / 800, canvas.height / 500);
-  c.setTransform(s, 0, 0, s, (canvas.width - 800 * s) / 2, (canvas.height - 500 * s) / 2);
-  return c;
-}
-function peindre(canvas, cas, apres) {
-  const c = cadre(canvas), url = apres ? cas.apres : cas.avant;
-  if (url) {
-    const img = new Image();
-    img.onload = () => { const s = Math.max(800 / img.width, 500 / img.height); c.drawImage(img, (800 - img.width * s) / 2, (500 - img.height * s) / 2, img.width * s, img.height * s); };
-    img.src = url;
-  } else DESSINS[cas.dessin](c, apres);
-}
-function afficher(cas) {
-  casActif = cas;
-  peindre($("#ba-avant"), cas, false); peindre($("#ba-apres"), cas, true);
-  $("#ba-titre").textContent = cas.titre; $("#ba-texte").textContent = cas.texte;
-  $("#ba-mesure").innerHTML = cas.mesures.map(([l, v, k]) => `<div class="${k}"><small>${l}</small><b>${v}</b></div>`).join("");
-  $("#ba-note").hidden = !!cas.avant;
-  document.querySelectorAll("#cas button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.id === cas.id));
-}
-function poser(v) { baRange.value = v; baEl.style.setProperty("--pos", v + "%"); }
-baRange.addEventListener("input", () => poser(baRange.value));
-function balayer() {
-  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return poser(50);
-  const cles = [50, 80, 20, 50], dur = 1400, t0 = performance.now();
-  (function pas(t) {
-    const p = Math.min(1, (t - t0) / dur), seg = Math.min(2, Math.floor(p * 3)), q = p * 3 - seg, e = q * q * (3 - 2 * q);
-    poser(cles[seg] + (cles[seg + 1] - cles[seg]) * e);
-    if (p < 1) requestAnimationFrame(pas);
-  })(t0);
-}
-$("#cas").innerHTML = GALERIE.map((g) => `<button type="button" data-id="${g.id}" aria-pressed="false"><canvas aria-hidden="true"></canvas><span><b>${g.titre}</b><small>${g.court}</small></span></button>`).join("");
-function vignettes() {
-  document.querySelectorAll("#cas button").forEach((b) => {
-    const cas = GALERIE.find((g) => g.id === b.dataset.id), cv = b.querySelector("canvas");
-    peindre(cv, cas, false);
-    const tmp = document.createElement("canvas"); tmp.style.cssText = "position:absolute;left:-9999px;width:64px;height:44px";
-    document.body.appendChild(tmp); peindre(tmp, cas, true);
-    const c = cv.getContext("2d"); c.setTransform(1, 0, 0, 1, 0, 0);
-    c.drawImage(tmp, cv.width / 2, 0, cv.width / 2, cv.height, cv.width / 2, 0, cv.width / 2, cv.height);
-    c.fillStyle = "#f5c400"; c.fillRect(cv.width / 2 - 1, 0, 2, cv.height); tmp.remove();
-  });
-}
-document.querySelectorAll("#cas button").forEach((b) => b.addEventListener("click", () => { afficher(GALERIE.find((g) => g.id === b.dataset.id)); balayer(); }));
-afficher(casActif); vignettes();
-let attente;
-new ResizeObserver(() => { clearTimeout(attente); attente = setTimeout(() => afficher(casActif), 120); }).observe(baEl);
-document.fonts && document.fonts.ready.then(() => { afficher(casActif); vignettes(); });
-
-// Saison : avant l'hiver (jusqu'au 1er décembre), puis jusqu'au printemps (15 mars)
-(function () {
-  const auj = new Date(); auj.setHours(0, 0, 0, 0);
-  const an = auj.getFullYear();
-  const debut = new Date(an, 11, 1), finA = new Date(an, 2, 15);
-  const jours = (d) => Math.ceil((d - auj) / 864e5);
-  if (auj > finA && auj < debut) {
-    $("#saison-jours").textContent = jours(debut);
-    $("#saison-texte").textContent = "avant le 1er décembre.";
-  } else {
-    $("#saison-titre").textContent = "En plein hiver";
-    $("#saison-jours").textContent = jours(auj <= finA ? finA : new Date(an + 1, 2, 15));
-    $("#saison-texte").textContent = "avant le printemps (15 mars).";
-  }
-})();
-
-// Prochaine vidange
-function vidange() {
-  const actuel = Math.max(0, parseInt($("#km-actuel").value) || 0);
-  const der = Math.max(0, parseInt($("#km-vidange").value) || 0);
-  const inter = parseInt($("#intervalle").value);
-  const prochaine = der + inter, reste = prochaine - actuel;
-  const p = Math.min(100, Math.max(0, ((actuel - der) / inter) * 100));
-  const chiffres = String(prochaine).padStart(6, "0").slice(-7);
-  $("#odo").innerHTML = [...chiffres].map((c, i, t) => `<i class="${i === t.length - 1 ? "last" : ""}">${c}</i>`).join("") + '<i style="background:none;color:var(--muted);width:auto;padding:0 .3rem;font-size:1rem;align-self:end">km</i>';
-  const j = $("#jauge");
-  j.style.width = p + "%";
-  j.style.background = p >= 100 ? "var(--red)" : p >= 80 ? "var(--hv)" : "var(--ok)";
-  $("#odo-msg").textContent = der > actuel ? "Le kilométrage de la dernière vidange dépasse le kilométrage actuel."
-    : reste <= 0 ? `Vidange due : vous l'avez dépassée de ${(-reste).toLocaleString("fr-CA")} km.`
-    : reste <= inter * .2 ? `Bientôt : encore ${reste.toLocaleString("fr-CA")} km avant la vidange.`
-    : `Encore ${reste.toLocaleString("fr-CA")} km avant votre prochaine vidange.`;
-}
-["#km-actuel", "#km-vidange", "#intervalle"].forEach((s) => $(s).addEventListener("input", vidange));
-vidange();
-
-// Rendez-vous
-$("#f-service").innerHTML = SERVICES.map((s) => `<option value="${s.id}">${s.nom}</option>`).join("") + '<option value="autre">Autre / je ne sais pas</option>';
-document.querySelectorAll("[data-service]").forEach((a) => a.addEventListener("click", () => { $("#f-service").value = a.dataset.service; }));
-$("#form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const champs = ["#f-nom", "#f-tel", "#f-auto"], vide = champs.find((s) => !$(s).value.trim());
-  if (vide) { $("#erreur").hidden = false; $("#erreur").style.color = "var(--red)"; $("#erreur").textContent = "Indiquez votre nom, votre téléphone et votre véhicule."; $(vide).focus(); return; }
-  $("#erreur").hidden = true;
-  const date = $("#f-date").value ? new Date($("#f-date").value + "T12:00").toLocaleDateString("fr-CA", { weekday: "long", day: "numeric", month: "long" }) : "dès que possible";
-  const txt = `Bonjour ${CONFIG.nom}, j'aimerais prendre rendez-vous.
-Nom : ${$("#f-nom").value.trim()}
-Téléphone : ${$("#f-tel").value.trim()}
-Véhicule : ${$("#f-auto").value.trim()}
-Service : ${$("#f-service").selectedOptions[0].text}
-Date souhaitée : ${date}${$("#f-msg").value.trim() ? "\nDétails : " + $("#f-msg").value.trim() : ""}`;
-  $("#recap").textContent = txt;
-  $("#recap-zone").hidden = false;
-  $("#copie-ok").hidden = true;
-});
-$("#copier").addEventListener("click", () => {
-  const ok = () => { $("#copie-ok").hidden = false; $("#copie-ok").textContent = `Message copié. Envoyez-le par texto au ${CONFIG.tel}.`; };
-  try {
-    navigator.clipboard.writeText($("#recap").textContent).then(ok, () => selectionner());
-  } catch (err) { selectionner(); }
-  function selectionner() {
-    const r = document.createRange(); r.selectNodeContents($("#recap"));
-    const s = getSelection(); s.removeAllRanges(); s.addRange(r);
-    $("#copie-ok").hidden = false; $("#copie-ok").textContent = "Texte sélectionné : faites Ctrl+C pour le copier.";
-  }
-});
-</script>
-
+<script src="assets/js/site.js" defer></script>
+</body>
 </html>
